@@ -1,0 +1,255 @@
+.form-container {
+    box-sizing: border-box;
+    margin-bottom: 8vh;
+    width: 100%;
+    max-width: 790px;
+    height: 100%;
+    @include tablet {
+        width: 90%;
+        margin: 0 auto 4vh auto;
+    }
+    @include laptop {
+        width: 80%;
+    }
+    @include laptop-l {
+        width: 70%;
+    }
+    .form-title {
+        font-family: 'montserratbold';
+        color: $primary-color;
+        text-align: center;
+        margin-top: 48px;
+        @include tablet {
+            font-size: 2.5em;
+            line-height: 1em;
+            margin: 48px auto 16px auto;
+        }
+    }
+    .form-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        @include laptop {
+            flex-direction: row;
+            margin: 8vh auto 15vh auto;
+        }
+        .personnal-infos {
+            background-color: $tertiary-color;
+            padding: 1.3em 1em;
+            @include tablet {
+                display: flex;
+                justify-content: space-between;
+                padding: 2.5em 4em;
+            }
+            @include laptop {
+                flex-direction: column;
+                align-content: center;
+                justify-content: unset;
+                margin: 0;
+                padding: 40px 20px;
+            }
+            .personnal-infos-container {
+                @include tablet {
+                    display: flex;
+                    flex-direction: column;
+                }
+                &:nth-child(1)>p {
+                    color: $white-color;
+                    opacity: 0.7;
+                }
+                h3 {
+                    font-family: 'montserratregular';
+                    font-weight: inherit;
+                    margin: 8px 0 0 0;
+                    @include tablet {
+                        font-size: 0.8em;
+                    }
+                }
+                p {
+                    color: $primary-color;
+                    font-family: 'montserratregular';
+                    margin: 8px 0 1.2em 0;
+                    @include tablet {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+        .contact-form {
+            display: grid;
+            background-color: $white-color;
+            width: 100%;
+            h2 {
+                display: none;
+                @include laptop {
+                    display: inline;
+                    margin-top: 0;
+                }
+            }
+
+            @include laptop {
+                font-family: 'montserratbold';
+                color: $secondary-color;
+                text-align: center;
+                padding: 40px 32px;
+            }
+            @include laptop-l {
+                padding: 40px 96px;
+            }
+            .alert-sent {
+                display: none;
+                font-family: 'montserratregular';
+                width: 140px;
+                color: $primary-color;
+                text-align: center;
+                margin: 24px auto 0 auto;
+
+                @include laptop {
+                    margin-top: 0;
+                    margin-bottom: 24px;
+                }
+            }
+            form {
+                padding: 1.3em 1em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+   
+                @include tablet {
+                    display: grid;
+                    grid-column-gap: 3em;
+                    grid-template-columns: repeat(8, 1fr);
+                    grid-template-rows: repeat(3, fit-content);
+                    grid-template-areas: 
+                    "n n n n e e e e" 
+                    "m m m m m m m m" 
+                    ". . . . . b b b";
+                    padding: 2em 4em 1.5em 4em;
+                }
+                @include laptop {
+                    display: grid;
+                    grid-column-gap: 3em;
+                    grid-row-gap: 1.5em;
+                    justify-content: center;
+                    grid-template-areas: 
+                    "n n n n e e e e" 
+                    "m m m m m m m m" 
+                    ". . . . b b b b";
+                    margin: auto 0;
+                    padding: 0;
+                }
+                @include laptop-l {
+                    grid-row-gap: 3em;
+                }
+                p {
+                    width: 100%;
+                    margin: 12px 0;
+                    &:nth-of-type(1) {
+                        margin-top: 0;
+                    } 
+                    @include tablet {
+                        &:nth-of-type(1) {
+                            margin-top: auto;
+                        }
+                    }
+                    @include laptop {
+                        display: inline-block;
+                        padding: 0;
+                        margin: 0;
+
+                    }
+                    input,
+                    textarea {
+                        border: none;
+                        border-bottom: 1px solid rgba($tertiary-color, 0.2);
+                        background-color: rgba($secondary-color, 0.05);
+                        display: block;
+                        padding: 8px 0 8px 8px;
+                        margin: 8px auto 0 auto;
+                        width: 95%;
+
+                        &:focus,
+                        :active {
+                            outline: none;
+                            border-bottom: 2px solid rgba($secondary-color, 1);
+                            font-family: 'montserratregular';
+                            color: $secondary-color;
+                        }
+                        &::-webkit-input-placeholder {
+                            /* WebKit browsers */
+                            @include placeholder
+                        }
+                        &:-moz-placeholder {
+                            /* Mozilla Firefox 4 to 18 */
+                            @include placeholder
+                        }
+                        &::-moz-placeholder {
+                            /* Mozilla Firefox 19+ */
+                            @include placeholder
+                        }
+                        &:-ms-input-placeholder {
+                            /* Internet Explorer 10+ */
+                            @include placeholder
+                        }
+                        @include tablet {
+                            padding: 0;
+                            padding-top: 0.4em;
+                            padding-bottom: 0.5em;
+                            padding-left: 1em;
+                            margin: 0;
+                            width: -webkit-fill-available;
+                        }
+
+                    }
+                    textarea {
+                        height: 30px;
+                        transition: height 0.3s ease-in-out;
+
+                        &:focus {
+                            height: 120px;
+                            transition: height 0.3s ease-in-out;
+                        }
+
+                    }
+                    &.name-input {
+                        grid-area: n;
+                    }
+                    &.email-input {
+                        grid-area: e;
+                    }
+                    &.message-input {
+                        grid-area: m;
+                    }
+                }
+                button {
+                    grid-area: b;
+                    background-color: $secondary-color;
+                    color: $white-color;
+                    text-transform: uppercase;
+                    border: none;
+                    padding: 16px 24px;
+                    border-radius: 36px;
+                    transition: background-color 0.3s ease-in-out;
+                    margin-top: 1em;
+                    &:hover {
+                        background-color: rgba($secondary-color, 0.7);
+                        transition: background-color 0.3s ease-in-out;
+                    }
+                    @include tablet {
+                        font-size: 0.6em;
+                        margin-top: 1em;
+                    }
+                    @include laptop {
+                        padding: 16px 16px;
+                        font-size: 0.7em;
+                        margin: 0;
+                        width: unset;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.email-input {
+    
+}

@@ -1,0 +1,187 @@
+.section02_portfolio {
+  background-color: $light-grey;
+  .project_wrapper {
+    width: 100%;
+    padding-top: 64px;
+    padding-bottom: 40px;
+    display: grid;
+    grid-row-gap: 72px;
+    @include tablet {
+      grid-row-gap: 96px;
+    }
+    @include laptop {
+      margin: auto;
+      width: 80%;
+    }
+    @include laptop-l {
+      width: 70%;
+      grid-row-gap: 260px;
+      padding-top: 96px;
+      padding-bottom: 120px;
+    }
+    .project_item {
+      position: relative; // background-color: RED;
+      display: flex;
+      flex-direction: column;
+      -webkit-animation-name: fadeInUp;
+      animation: fadeInUp;
+      .project_thumbnail {
+        width: 100%;
+        max-width: 450px;
+        margin: auto;
+        @include tablet {
+          width: 55%;
+        }
+        @include laptop {
+          transition: ease-in-out 0.3s;
+          &:hover {
+            -wekit-box-shadow: 0px 5px 50px -9px rgba($tertiary-color, 0.2);
+            -moz-box-shadows: 0px 5px 50px -9px rgba($tertiary-color, 10.2);
+            box-shadow: 0px 5px 50px -9px rgba($tertiary-color, 0.2);
+            transition: ease-in-out 0.3s;
+          }
+        }
+      }
+      .under_img_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          font-family: 'montserratregular';
+          font-size: 12px;
+          color: $secondary-color;
+          margin: 12px 0 0 0;
+          @include tablet {
+            margin: 0;
+          }
+          @include laptop-l {
+            font-size: 16px;
+          }
+        }
+        .project_title {
+          font-family: 'montserratbold';
+          font-size: 22px;
+          color: $tertiary-color;
+          margin: 16px 0;
+          @include tablet {
+            margin: 8px 0 0 0;
+          }
+          @include laptop-l {
+            font-size: 32px;
+          }
+        }
+        .project_description {
+          display: none;
+          @include tablet {
+            font-size: 16px;
+            display: block;
+            margin: 16px 0;
+            color: rgba($tertiary-color, 0.5)
+          }
+          @include laptop-l {
+            font-size: 20px;
+          }
+        }
+        .button_view_project {
+          font-family: 'montserratbold';
+          font-size: 12px;
+          color: $white-color;
+          background-color: $secondary-color;
+          padding: 14px 40px;
+          text-decoration: none;
+          border-radius: 32px;
+          transition: all 0.3s ease-in-out;
+          @include laptop-l {
+            font-size: 16px;
+          }
+          &:hover {
+            background-color: rgba($secondary-color, 0.7);
+            transition: all 0.3s ease-in-out;
+            transform: translateY(-4px);
+          }
+        }
+      }
+    }
+    .project_img_left {
+      @include tablet {
+        flex-direction: row;
+        align-items: center;
+        .under_img_wrapper {
+          margin-left: 24px;
+          align-items: flex-end;
+          @include laptop {
+            margin-left: 80px;
+          }
+          .project_description {
+            text-align: right;
+          }
+        }
+      }
+    }
+    .project_img_right {
+      @include tablet {
+        flex-direction: row-reverse;
+        align-items: center;
+        .under_img_wrapper {
+          margin-right: 24px;
+          align-items: flex-start;
+          @include laptop {
+            margin-right: 80px;
+          }
+          .project_description {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section02_portfolio-retoucher {
+  margin: 4em 0 4em 0;
+  .retoucher-category-container {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+    grid-auto-rows: minmax(176px, 0.66fr);
+    .retoucher-item {
+      position: relative;
+      &:hover {
+        .retoucher-item-hover {
+          background-color: rgba($secondary-color, 0.8);
+          @include hover-transition;
+          h3 {
+            opacity: 1;
+            @include hover-transition
+          }
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .retoucher-item-hover {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($secondary-color, 0);
+        @include hover-transition;
+        h3 {
+          opacity: 0;
+          font-family: 'montserrat-semibold';
+          margin: 0;
+          color: $white-color;
+          @include hover-transition
+        }
+      }
+
+    }
+  }
+}

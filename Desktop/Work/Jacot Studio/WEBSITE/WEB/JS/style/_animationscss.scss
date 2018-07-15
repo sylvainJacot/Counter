@@ -1,0 +1,78 @@
+@keyframes change {
+    0%,
+    12.66%,
+    100% {
+      transform: translatey(0);
+    }
+    16.66%,
+    29.32% {
+      transform: translatey(-100%);
+    }
+    33.32%,
+    45.98% {
+      transform: translatey(-200%);
+    }
+    49.98%,
+    62.64% {
+      transform: translatey(-300%);
+    }
+    66.64%,
+    79.3% {
+      transform: translatey(-200%);
+    }
+    83.3%,
+    95.96% {
+      transform: translatey(-100%);
+    }
+  }
+
+
+  @-webkit-keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @-moz-keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%;
+      
+    }
+  }
+
+  @keyframes arrow {
+    0% {
+      bottom: 64px;
+    }
+    50% {
+      bottom: 48px;
+    }
+    100% {
+      bottom: 64px;
+    }
+  }
+

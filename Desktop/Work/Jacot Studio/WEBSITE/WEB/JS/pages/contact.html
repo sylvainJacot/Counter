@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jacot Studio</title>
+    <link rel="stylesheet" type="text/css" href="../style/main.css">
+</head>
+
+
+<header id="header" class="header container">
+
+    <h1>Jacot Studio
+        <a href="../index.html" class="js_logo_link">
+
+            <img src="../img/Logo.svg" alt="logo jacot studio" class="logo_img">
+        </a>
+
+    </h1>
+
+
+
+    <div class="nav_burger_menu_ic" id="nav-mobile">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+
+    </div>
+    <nav id="menu-sm-active">
+
+        <ul>
+            <li>
+                <a href="../index.html">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="social_xs_sm" id="social_xs_sm">
+        <a href="https://www.instagram.com/jacot_studio/" alt="instagram jacot" class="insta-ic"></a>
+        <a href="https://www.linkedin.com/in/sylvain-jacot/" alt="linkedin jacot" class="linkedin-ic"></a>
+        <a href="https://www.facebook.com/jacot.work/" alt="facebook jacot" class="facebook-ic"></a>
+    </div>
+
+
+
+</header>
+
+<body>
+
+    <div class="form-container container">
+        <h1 class="form-title">Get in Touch !</h1>
+        <div class="form-wrapper">
+            <div class="personnal-infos">
+                    <div class="personnal-infos-container">
+                <h3>Address</h3>
+                <p>Based in Belgium</p></div>
+                <div class="personnal-infos-container"><h3>Let's talk</h3>
+                <p>+32(0) 472 544 192</p></div>
+                <div class="personnal-infos-container"><h3>Contact</h3>
+                <p>jacot.studio@gmail.com</p></div>
+            </div>
+            <div class="contact-form" id="contact-form">
+                <h2>Contact me</h2>
+                <div class="alert-sent">Your message has been sent !</div>
+                <form action="">
+                    <p class="name-input" >
+                        <!-- <label for="">Name</label> -->
+                        <input type="text" name="name"placeholder="Name" id="name" required>
+                    </p>
+                    <p class="email-input">
+                        <!-- <label for="">Email address</label>  -->
+                     <input type="email" name="email" placeholder="Email" id="email" required>
+                    </p>
+                    <p class="message-input"> 
+                        <!-- <label for="">Your message</label> -->
+                        <textarea name="message" placeholder="Your message" id="message" required></textarea>
+                    </p>
+                    <button type="submit" class="button-sent" id="button-sent">Send message</button>
+                </form>
+            </div>
+        </div>
+    </div> 
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/firebase.js"></script>
+</body>
+<footer>
+    <div class="bottom_footer_wrapper container">
+		<p>&copy Jacot Studio 2018</p>
+		<div class="social_footer">
+			<a href="https://www.instagram.com/jacot_studio/" class="insta-ic"></a>
+			<a href="https://www.linkedin.com/in/sylvain-jacot/" class="linkedin-ic"></a>
+			<a href="https://www.facebook.com/jacot.work/" class="facebook-ic"></a>
+		</div>
+	</div>
+
+</footer>
+
+</html>

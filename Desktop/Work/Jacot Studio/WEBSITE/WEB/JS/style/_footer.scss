@@ -1,0 +1,94 @@
+footer {
+    width: 100%;
+    .get_in_touch {
+        max-width: fit-content;
+        margin-top: 16px;
+        margin-bottom: 24px;
+        font-family: 'montserratbold';
+        font-size: 24px;
+        line-height: 1.1;
+        @include tablet {
+            margin-top: 24px;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+        }
+        @include laptop {
+            margin: 24px auto 32px auto;
+        }
+        p {
+            margin: 0;
+            margin-bottom: 8px;
+            font-size: 18px;
+            max-width: 200px;
+            color: $white-color;
+            @include tablet {
+                margin-bottom: 0;
+                max-width: 250px;
+            }
+            @include laptop {
+                font-size: 20px;
+            }
+        }
+        a {
+            color: $primary-color;
+            font-size: 24px;
+            @include tablet {
+                margin-left: 32px;
+                font-size: 32px;
+            }
+            @include laptop {
+                margin-left: 72px;
+                font-size: 32px;
+            }
+        }
+    }
+    .bottom_footer_wrapper {
+        background-color: $white-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+            padding: 24px 0;
+            margin: 0;
+            color: rgba($tertiary-color, 0.6);
+            font-family: 'montserratregular';
+            font-size: 12px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .social_footer {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 24px;
+            a {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                &:nth-child(n+2) {
+                    margin-left: 62px;
+                }
+                &.insta-ic {
+                    @include bg-cover ("../img/ICONS/instagram_color.svg");
+                }
+                &.linkedin-ic {
+                    @include bg-cover ("../img/ICONS/linkedin_color.svg");
+                }
+                &.facebook-ic {
+                    @include bg-cover ("../img/ICONS/Facebook_color.svg");
+                }
+            }
+        }
+    }
+}
+
+.footer-photo {
+    .get_in_touch {
+        p {
+            color: $tertiary-color;
+        }
+        a {
+            color: $secondary-color;
+        }
+    }
+}

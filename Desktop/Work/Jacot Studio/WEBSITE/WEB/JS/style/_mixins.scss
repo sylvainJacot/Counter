@@ -1,0 +1,27 @@
+@mixin bg-cover ($imgpath) {
+    background: url("../img/#{$imgpath}") no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+@mixin hover-transition {
+    transition: all 0.3s ease;
+}
+
+@mixin marges {
+
+        padding: 0 16px;
+        @include tablet {
+            padding: 0 72px;
+        }
+    
+}
+
+@mixin placeholder {
+    color: rgba($tertiary-color,0.5);
+    font-family: 'montserratregular';
+    @include laptop {
+
+    }
+
+}
