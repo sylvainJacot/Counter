@@ -1,0 +1,40 @@
+.carditem {
+    display: block;
+    background: white;
+    width: fit-content;
+    padding: 24px;
+    margin: 16px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    max-width: 240px;
+    -webkit-box-shadow: 6px 9px 16px -12px rgba(0,0,0,0.1);
+    -moz-box-shadow: 6px 9px 16px -12px rgba(0,0,0,0.1);
+    box-shadow: 6px 9px 16px -12px rgba(0,0,0,0.1);
+        // cursor: pointer;
+        -moz-osx-font-smoothing: grayscale;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        transition: transform 0.25s ease-out;
+    &:hover {
+        transform: scale(1.03);
+        transition: transform 0.25s ease-out;
+    }
+
+    h2 {
+        color: slateblue;
+    }
+    code {
+        display: block;
+        background-color: lightslategrey;
+        padding: 8px;
+        color: white;
+        border-radius: 8px;
+        word-break: break-word;
+
+    
+    }
+
+}

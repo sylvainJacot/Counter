@@ -1,0 +1,34 @@
+.card {
+    background: aliceblue;
+    padding-top: 40px;
+
+    h1 {
+        margin:0px;
+        color: midnightblue;
+        margin-bottom: 8px;
+    }
+    .cardsWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    .steps {
+        ul {
+            padding:0;
+            li {
+                list-style: none;
+                h3 {
+                    display: block;
+                    max-width: 50%;
+                    margin: 24px auto;
+                }
+                img {
+                    width: 66%;
+                    border-radius: 8px;
+                    border: 8px #767680 solid;
+                }
+            }
+        }
+    }
+}
