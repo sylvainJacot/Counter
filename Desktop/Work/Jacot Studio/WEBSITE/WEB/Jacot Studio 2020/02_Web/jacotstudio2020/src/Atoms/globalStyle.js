@@ -1,6 +1,7 @@
 /* seen on https://dev.to/alaskaa/how-to-import-a-web-font-into-your-react-app-with-styled-components-4-1dni */
 
 import {createGlobalStyle} from "styled-components";
+import {media} from "./mediaqueries";
 
 import PlayfairDisplayBlack from "../Atoms/fonts/Playfair_Display/PlayfairDisplay-Black.woff";
 import PlayfairDisplayBlack2 from "../Atoms/fonts/Playfair_Display/PlayfairDisplay-Black.woff2";
@@ -20,6 +21,13 @@ export default createGlobalStyle`
     url(${RobotoRegular2}) format('woff2'),
     font-weight: normal;
     font-style: normal;
-}
+    }
+    
+    body {
+    background-color: black;
+    ${media.desktop `
+    background-color: red;
+    `
+    }
 
 `;
