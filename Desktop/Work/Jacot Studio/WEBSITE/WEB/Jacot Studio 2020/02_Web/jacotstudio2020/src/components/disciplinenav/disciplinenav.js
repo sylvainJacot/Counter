@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {media} from "../../Atoms/mediaqueries";
-import {DisciplineNavItem} from "./disciplinenavitem";
-import {brackgrounds} from "../../Atoms/colors";
+import {TestDeLexport} from "./disciplinenavitem";
 
 export const DisciplineNavWrapper = styled.nav`
 `;
@@ -21,9 +20,9 @@ export class DisciplineNav extends React.Component {
 
                     <DisciplineNavList>
 
-                        <DisciplineNavItem />
-                        <DisciplineNavItem />
-                        <DisciplineNavItem />
+                        <TestDeLexport />
+                        <TestDeLexport />
+                        <TestDeLexport />
 
                     </DisciplineNavList>
 
