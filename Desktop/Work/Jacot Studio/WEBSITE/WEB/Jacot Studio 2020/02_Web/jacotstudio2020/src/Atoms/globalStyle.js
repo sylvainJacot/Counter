@@ -10,6 +10,7 @@ import RobotoRegular from "../Atoms/fonts/Roboto/Roboto-Regular.woff";
 import RobotoRegular2 from "../Atoms/fonts/Roboto/Roboto-Regular.woff";
 
 export default createGlobalStyle`
+
     @font-face {
         font-family: 'Playfair Display';
         url(${PlayfairDisplayBlack}) format('woff'),
@@ -21,6 +22,10 @@ export default createGlobalStyle`
     url(${RobotoRegular2}) format('woff2'),
     font-weight: normal;
     font-style: normal;
+    }
+    
+    html {
+    font-size: 8px;
     }
     
     body {

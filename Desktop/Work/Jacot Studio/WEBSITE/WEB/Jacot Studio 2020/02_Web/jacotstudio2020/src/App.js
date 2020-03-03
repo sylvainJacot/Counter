@@ -15,7 +15,6 @@ function App() {
   return (
     <div className="App">
     <GlobalFonts/>
-    <P> New Jacot Studio Website 2020 !</P>
         <HomePage/>
 
     </div>
