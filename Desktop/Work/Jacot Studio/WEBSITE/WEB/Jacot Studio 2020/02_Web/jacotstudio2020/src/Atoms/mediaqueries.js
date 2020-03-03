@@ -6,6 +6,7 @@ export const sizes = {
     desktopL: 1440,
     desktop: 1024,
     tablet: 768,
+    mobileL: 425,
     mobile: 320
 };
 
