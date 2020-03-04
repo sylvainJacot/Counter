@@ -12,9 +12,8 @@ height: 138px;
 margin-top: 32px;
 margin-right: 16px;
 text-align: right;
-color: ${props => props.isHoverActive ? "red" : "green"};
-/*color: ${colorsRoles.White};*/
-transition: ${transitions.basic2}
+color: ${colorsRoles.White};
+transition: ${transitions.basic2};
 
 ${media.mobileL `
 margin-top: 40px;
@@ -114,7 +113,7 @@ transform: translate(-50%,-50%);
 animation: ${UpDown} 5s linear infinite;
 `}
 ${media.desktopL`
-width: ${props => props.isHoverActive ? "520px" : "400px"};
+width: 400px;
 bottom: -182px;
 `}
 }
@@ -136,10 +135,9 @@ bottom: -182px;
 
 export class DisciplineNavItemContent extends React.Component {
     render() {
-        const {onMouseEnter, onMouseLeave} = this.props;
         return (
             <>
-                <DisciplineNavItemLink href={"#"} isHoverActive={onMouseEnter} isHoverActive={onMouseLeave}>
+                <DisciplineNavItemLink href={"#"}>
 
                     <DisciplineNavItemText>
 

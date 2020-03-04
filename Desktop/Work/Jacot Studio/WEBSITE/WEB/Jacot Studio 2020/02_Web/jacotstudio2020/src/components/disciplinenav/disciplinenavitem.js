@@ -26,8 +26,7 @@ top:0;
 transform: translate(0,-50%);
 width: 100%;
 height: 320px;
-background-color: ${props => props.onClick ? "yellow" : "blue"};
-/*${backgrounds.RadialBg01};*/
+${backgrounds.RadialBg01};
 ${media.desktop`
 width: 690px;
 height: 624px;
@@ -57,7 +56,7 @@ transform: translate(50%,0);
 transition: ${transitions.basic1}
 ${backgrounds.RadialBg02};
 ${media.desktop`
-display: ${props => props.isHoverActive ? "none" : "block"}
+display: "block";
 animation: ${Breathe} 5s linear infinite;
 `}
 `;
@@ -72,12 +71,11 @@ background-color: ${colorsRoles.Brand01}16;
 
 export class DisciplineNavItem extends React.Component {
     render() {
-        const {onMouseEnter,onMouseLeave,onClick} = this.props;
         return (
             <>
               <DisciplineNavItemWrapper>
 
-                  <DisciplineNavItemContent onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}/>
+                  <DisciplineNavItemContent/>
                   <ImgShadow/>
                   <BrandBackground/>
 
