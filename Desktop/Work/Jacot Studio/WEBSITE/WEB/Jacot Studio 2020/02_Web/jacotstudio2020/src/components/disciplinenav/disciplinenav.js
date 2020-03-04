@@ -15,13 +15,14 @@ display: flex;
 export class DisciplineNav extends React.Component {
     constructor(props) {
         super(props);
+        this.handleClick = this.handleClick.bind(this);
         this.state = {
             hover: false,
             clickEffect: false,
         };
     }
     handleClick = () => {
-        console.log("Clicked");
+        alert("Clicked");
         this.setState({clickEffect: !this.state.clickEffect})
     }
 
@@ -40,11 +41,11 @@ export class DisciplineNav extends React.Component {
             <>
                 <DisciplineNavWrapper>
 
-                    <DisciplineNavList >
+                    <DisciplineNavList>
 
-                        <DisciplineNavItem onClick={this.handleClick} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}/>
-                        <DisciplineNavItem onClick={this.handleClick} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}/>
-                        <DisciplineNavItem onClick={this.handleClick} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}/>
+                        <DisciplineNavItem onClick={this.handleClick}/>
+                        <DisciplineNavItem onClick={this.handleClick}/>
+                        <DisciplineNavItem onClick={this.handleClick}/>
 
                     </DisciplineNavList>
 
