@@ -12,7 +12,8 @@ height: 138px;
 margin-top: 32px;
 margin-right: 16px;
 text-align: right;
-color: ${colorsRoles.White};
+color: ${props => props.isHoverActive ? "red" : "green"};
+/*color: ${colorsRoles.White};*/
 transition: ${transitions.basic2}
 
 ${media.mobileL `
@@ -98,7 +99,7 @@ width: 328px;
 height: auto;
 left: -80px;
 top: 64px;
-transition: ${transitions.basic1}
+transition: ${transitions.easeOut}
 
 ${media.tablet`
 width: 400px;
@@ -113,7 +114,7 @@ transform: translate(-50%,-50%);
 animation: ${UpDown} 5s linear infinite;
 `}
 ${media.desktopL`
-width: 400px;
+width: ${props => props.isHoverActive ? "520px" : "400px"};
 bottom: -182px;
 `}
 }
@@ -124,11 +125,9 @@ bottom: -182px;
     cursor: cell;
     transition: ${transitions.basic1}
    img {
-    
+      transition: ${transitions.basic2}
       ${media.desktop`
-        width: 640px;
-        bottom: unset;
-        top: 80%;
+        bottom: -520px;
       `}
     }
 
@@ -137,9 +136,10 @@ bottom: -182px;
 
 export class DisciplineNavItemContent extends React.Component {
     render() {
+        const {onMouseEnter, onMouseLeave} = this.props;
         return (
             <>
-                <DisciplineNavItemLink href={"#"}>
+                <DisciplineNavItemLink href={"#"} isHoverActive={onMouseEnter} isHoverActive={onMouseLeave}>
 
                     <DisciplineNavItemText>
 
@@ -148,7 +148,7 @@ export class DisciplineNavItemContent extends React.Component {
 
                     </DisciplineNavItemText>
 
-                    <img src={Parrot}/>
+                    <img src={Parrot} />
 
                 </DisciplineNavItemLink>
 

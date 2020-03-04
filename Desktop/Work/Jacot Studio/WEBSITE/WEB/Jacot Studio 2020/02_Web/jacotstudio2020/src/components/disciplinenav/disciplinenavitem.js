@@ -26,7 +26,8 @@ top:0;
 transform: translate(0,-50%);
 width: 100%;
 height: 320px;
-${backgrounds.RadialBg01};
+background-color: ${props => props.onClick ? "yellow" : "blue"};
+/*${backgrounds.RadialBg01};*/
 ${media.desktop`
 width: 690px;
 height: 624px;
@@ -56,8 +57,8 @@ transform: translate(50%,0);
 transition: ${transitions.basic1}
 ${backgrounds.RadialBg02};
 ${media.desktop`
-display: block;
-/*animation: ${Breathe} 5s linear infinite;*/
+display: ${props => props.isHoverActive ? "none" : "block"}
+animation: ${Breathe} 5s linear infinite;
 `}
 `;
 export const BrandBackground = styled.div`
@@ -69,13 +70,14 @@ bottom: 0;
 background-color: ${colorsRoles.Brand01}16;
 `;
 
-export class TestDeLexport extends React.Component {
+export class DisciplineNavItem extends React.Component {
     render() {
+        const {onMouseEnter,onMouseLeave,onClick} = this.props;
         return (
             <>
               <DisciplineNavItemWrapper>
 
-                  <DisciplineNavItemContent/>
+                  <DisciplineNavItemContent onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}/>
                   <ImgShadow/>
                   <BrandBackground/>
 
