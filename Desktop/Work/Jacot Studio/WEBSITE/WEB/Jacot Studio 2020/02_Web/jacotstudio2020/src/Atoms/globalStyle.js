@@ -2,6 +2,7 @@
 
 import {createGlobalStyle} from "styled-components";
 import {media} from "./mediaqueries";
+import {colorsRoles} from "./colors";
 
 import PlayfairDisplayBlack from "../Atoms/fonts/Playfair_Display/PlayfairDisplay-Black.woff";
 import PlayfairDisplayBlack2 from "../Atoms/fonts/Playfair_Display/PlayfairDisplay-Black.woff2";
@@ -29,10 +30,6 @@ export default createGlobalStyle`
     }
     
     body {
-    background-color: black;
-    ${media.desktop `
-    background-color: red;
-    `
-    }
+    background-color: ${colorsRoles.DarkGrey};
 
 `;
