@@ -44,48 +44,6 @@ ${gradient.Brand0130};
 }
 
 `;
-export const DisciplineNavItemLink = styled.a` 
-img {
-position: absolute;
-z-index: 1;
-width: 328px;
-height: auto;
-left: -80px;
-top: 64px;
-transition: ${transitions.easeOut}
-
-${media.tablet`
-width: 400px;
-top: 0;
-`}
-${media.desktop`
-width: 300px;
-left:50%;
-top: unset;
-bottom: -80px;
-transform: translate(-50%,-50%);
-animation: ${UpDown} 5s linear infinite;
-`}
-${media.desktopL`
-width: 400px;
-bottom: -182px;
-`}
-}
-
-////////////////////:hover effects
-
-&:hover {
-    cursor: cell;
-    transition: ${transitions.basic1}
-   img {
-      transition: ${transitions.basic2}
-      ${media.desktop`
-        bottom: -520px;
-      `}
-    }
-
-}
-`;
 export const DisciplineNavItemText = styled.div`
 float: right;
 width: 48%;
@@ -162,6 +120,55 @@ margin-left: 40px;
 }
 
 `;
+export const DisciplineNavItemLink = styled.a` 
+display: block;
+width: 100%;
+height: 100%;
+img {
+position: absolute;
+z-index: 1;
+width: 328px;
+height: auto;
+left: -80px;
+top: 64px;
+transition: ${transitions.easeOut}
+
+${media.tablet`
+width: 400px;
+top: 0;
+`}
+${media.desktop`
+width: 300px;
+left:50%;
+top: unset;
+bottom: -80px;
+transform: translate(-50%,-50%);
+animation: ${UpDown} 5s linear infinite;
+`}
+${media.desktopL`
+width: 400px;
+bottom: -182px;
+`}
+}
+
+////////////////////:hover effects
+
+&:hover {
+    cursor: pointer;
+    transition: ${transitions.basic1}
+   img {
+      transition: ${transitions.basic2}
+      ${media.desktop`
+        width: 520px;
+        bottom: -520px;
+      `}
+    }
+    ${DisciplineNavItemText} > p {
+    display: block;
+    }
+
+}
+`;
 export const ImgShadow = styled.div`
 position: absolute;
 display: none;
@@ -199,7 +206,7 @@ export class DisciplineNavItem extends React.Component {
 
                       </DisciplineNavItemText>
 
-                      <img src={Parrot} />
+                      <img alt="Parrot picture" src={Parrot} />
 
                       <ImgShadow/>
                       <BrandBackground/>
