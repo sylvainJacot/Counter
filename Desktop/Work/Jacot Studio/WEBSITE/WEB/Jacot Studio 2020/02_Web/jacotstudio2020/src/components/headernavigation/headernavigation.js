@@ -7,7 +7,6 @@ import {LogoJacotStudio} from "../../Atoms/icons";
 
 export const HeaderWrapper = styled.header`
 background-color: ${colorsRoles.White}5;
-height: 56px;
 `;
 
 
@@ -16,7 +15,7 @@ export class HeaderNavigation extends React.Component {
         return (
             <>
                 <HeaderWrapper>
-                 <LogoJacotStudio FillColor={"red"} CircleColor={"blue"} Size={"40px"}/>
+                 <LogoJacotStudio FillColor={colorsRoles.White} CircleColor={colorsRoles.LightGrey} Size={"40"}/>
                 HeaderNavigation
                 {this.props.children}
                 </HeaderWrapper>

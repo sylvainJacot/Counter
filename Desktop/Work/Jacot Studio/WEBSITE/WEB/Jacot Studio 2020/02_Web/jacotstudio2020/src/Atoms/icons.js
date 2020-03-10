@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 export const LogoJacotStudioWrapper = styled.div`
-width: ${props => props.Size};
-height: ${props => props.Size};
+width: ${props => props.Size}px;
+height: ${props => props.Size}px;
 `;
 
 

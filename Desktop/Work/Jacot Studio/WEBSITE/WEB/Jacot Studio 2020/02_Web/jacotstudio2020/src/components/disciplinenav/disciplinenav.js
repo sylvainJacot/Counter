@@ -5,6 +5,8 @@ import {transitions} from "../../Atoms/animations";
 import {DisciplineNavItem} from "./disciplinenavitem";
 
 export const DisciplineNavWrapper = styled.nav`
+width: 100%;
+height: 100%;
 `;
 
 export const DisciplineNavList = styled.ul`
