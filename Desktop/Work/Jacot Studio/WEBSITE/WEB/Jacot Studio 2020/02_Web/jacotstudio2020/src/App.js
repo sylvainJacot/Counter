@@ -5,6 +5,7 @@ import GlobalFonts from "./Atoms/globalStyle";
 import styled from "styled-components";
 
 import {HomePage} from "./components/pages/homepage";
+import {HeaderNavigation} from "./components/headernavigation/headernavigation";
 
 export const P = styled.p`
 font-family: PlayfairDisplay-Regular_Black;
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="App">
     <GlobalFonts/>
+        <HeaderNavigation />
         <HomePage/>
 
     </div>
