@@ -6,7 +6,13 @@ import {LogoJacotStudio} from "../../Atoms/icons";
 
 
 export const HeaderWrapper = styled.header`
-background-color: ${colorsRoles.White}5;
+position: fixed;
+display: block;
+z-index: 1;
+right: 0;
+width: 80px;
+height: 100vh;
+background-color: red;
 `;
 
 
