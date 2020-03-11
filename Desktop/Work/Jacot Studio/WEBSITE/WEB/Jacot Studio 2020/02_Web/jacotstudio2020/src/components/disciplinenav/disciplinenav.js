@@ -5,6 +5,9 @@ import {transitions} from "../../Atoms/animations";
 import {DisciplineNavItem} from "./disciplinenavitem";
 
 export const DisciplineNavWrapper = styled.nav`
+height: 100%;
+margin-right: 80px;
+/*margin-right: ${props => props.headerNavWidth}px; */
 `;
 
 export const DisciplineNavList = styled.ul`
@@ -30,11 +33,15 @@ transition: ${transitions.basic2}
 `;
 
 export class DisciplineNav extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
     render() {
+        const {headerNavWidth} = this.props;
         return (
             <>
-                <DisciplineNavWrapper>
+                <DisciplineNavWrapper headerNavWidth={headerNavWidth}>
 
                     <DisciplineNavList>
 

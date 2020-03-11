@@ -4,9 +4,10 @@ import {DisciplineNav} from "../disciplinenav/disciplinenav";
 
 export class HomePage extends React.Component {
     render() {
+        const {headerNavWidth} = this.props;
         return (
             <>
-            <DisciplineNav/>
+            <DisciplineNav width={headerNavWidth}/>
             </>
         )
     }
