@@ -33,6 +33,9 @@ transition: ${transitions.basic2}
 `;
 
 export class DisciplineNav extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         const {headerNavWidth} = this.props;

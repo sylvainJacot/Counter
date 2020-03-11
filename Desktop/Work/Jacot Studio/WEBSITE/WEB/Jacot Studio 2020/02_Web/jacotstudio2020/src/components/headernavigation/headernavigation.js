@@ -40,13 +40,13 @@ export class HeaderNavigation extends React.Component {
             <>
                 <HeaderWrapper>
                  <LogoJacotStudio FillColor={colorsRoles.White} CircleColor={colorsRoles.LightGrey} Size={"40px"}/>
-                {this.props.children}
                 <SocialsWrapper>
                     <a href="#"><IcLinkedin FillColor={colorsRoles.LightGrey} Size={"24px"}/></a>
                     <a href="#"><IcInstagram FillColor={colorsRoles.LightGrey} Size={"24px"}/></a>
                     <a href="#"><IcWhatsapp FillColor={colorsRoles.LightGrey} Size={"24px"}/></a>
                 </SocialsWrapper>
                 </HeaderWrapper>
+                {this.props.children}
             </>
         )
     }
