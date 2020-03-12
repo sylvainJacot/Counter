@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+
+import {Link} from "react-router-dom";
+
 import {media} from "../../Atoms/mediaqueries";
 import {transitions, Breathe, UpDown} from "../../Atoms/animations";
 import {colorsRoles, gradient, backgrounds} from "../../Atoms/colors";
@@ -120,7 +123,7 @@ margin-left: 40px;
 }
 
 `;
-export const DisciplineNavItemLink = styled.a` 
+export const StyledLink = styled(Link)` 
 display: block;
 width: 100%;
 height: 100%;
@@ -197,7 +200,7 @@ export class DisciplineNavItem extends React.Component {
     render() {
         return (
               <DisciplineNavItemWrapper>
-                  <DisciplineNavItemLink href={"#"}>
+                  <StyledLink to="/Frontend">
 
                       <DisciplineNavItemText>
 
@@ -211,7 +214,7 @@ export class DisciplineNavItem extends React.Component {
                       <ImgShadow/>
                       <BrandBackground/>
 
-                  </DisciplineNavItemLink>
+                  </StyledLink>
 
               </DisciplineNavItemWrapper>
 
