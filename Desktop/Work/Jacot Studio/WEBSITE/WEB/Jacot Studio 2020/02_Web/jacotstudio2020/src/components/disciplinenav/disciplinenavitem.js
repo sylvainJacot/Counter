@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 import {Link} from "react-router-dom";
 
-import {media} from "../../Atoms/mediaqueries";
-import {transitions, Breathe, UpDown} from "../../Atoms/animations";
-import {colorsRoles, gradient, backgrounds} from "../../Atoms/colors";
+import {media} from "../Atoms/mediaqueries";
+import {transitions, Breathe, UpDown} from "../Atoms/animations";
+import {colorsRoles, gradient, backgrounds} from "../Atoms/colors";
 import Parrot from "../../media/img/Parrot.png";
 
 

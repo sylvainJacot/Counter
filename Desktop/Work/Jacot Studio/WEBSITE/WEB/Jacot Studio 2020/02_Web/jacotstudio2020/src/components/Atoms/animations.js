@@ -2,8 +2,8 @@ import {keyframes} from "styled-components";
 import {backgrounds} from "./colors";
 
 export const transitions = {
-    basic1 : "all 0.1s;",
-    basic2 : "all 0.3s;",
+    basic1 : "0.1s all;",
+    basic2 : " 0.3s all;",
     easeOut: "all 0.5s cubic-bezier(.17,.67,.83,.67)"
 };
 

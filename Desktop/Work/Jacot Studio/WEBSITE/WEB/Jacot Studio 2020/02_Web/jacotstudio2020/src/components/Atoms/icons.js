@@ -1,7 +1,45 @@
 import React from "react";
+import {colorsRoles} from "./colors";
 import styled from "styled-components";
+import {transitions} from "./animations";
 
+export const SpanWrapper = styled.div``;
+export const IcBurgerMenuWrapper = styled.button`
+width: 80px;
+height: 80px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: unset;
+border: unset;
+cursor: pointer;
 
+& ${SpanWrapper} {
+display: flex;
+margin-bottom: 8px;
+    & span {
+    display: block;
+    width: 3px;
+    height: 16px;
+    border-radius: 0 0 100px 0;
+    background-color: ${colorsRoles.LightGrey};
+    transition: ${transitions.basic2};
+    }
+        & :nth-child(2) {
+    margin: 0 4px;
+    border-radius: 100px 0 0 0;
+    }
+}
+& p {
+font-family: Roboto-Bold;
+font-size: 2rem;
+color: ${colorsRoles.LightGrey};
+letter-spacing: 4px;
+text-align: center;
+text-transform: uppercase;
+}
+`;
 
 export class LogoJacotStudio extends React.Component {
     render() {
@@ -55,6 +93,21 @@ export class IcWhatsapp extends React.Component {
                     <path d="M40.01,0 L39.99,0 C17.935,0 0,17.94 0,40 C0,48.75 2.82,56.86 7.615,63.445 L2.63,78.305 L18.005,73.39 C24.33,77.58 31.875,80 40.01,80 C62.065,80 80,62.055 80,40 C80,17.945 62.065,0 40.01,0 Z M63.285,56.485 C62.32,59.21 58.49,61.47 55.435,62.13 C53.345,62.575 50.615,62.93 41.425,59.12 C29.67,54.25 22.1,42.305 21.51,41.53 C20.945,40.755 16.76,35.205 16.76,29.465 C16.76,23.725 19.675,20.93 20.85,19.73 C21.815,18.745 23.41,18.295 24.94,18.295 C25.435,18.295 25.88,18.32 26.28,18.34 C27.455,18.39 28.045,18.46 28.82,20.315 C29.785,22.64 32.135,28.38 32.415,28.97 C32.7,29.56 32.985,30.36 32.585,31.135 C32.21,31.935 31.88,32.29 31.29,32.97 C30.7,33.65 30.14,34.17 29.55,34.9 C29.01,35.535 28.4,36.215 29.08,37.39 C29.76,38.54 32.11,42.375 35.57,45.455 C40.035,49.43 43.655,50.7 44.95,51.24 C45.915,51.64 47.065,51.545 47.77,50.795 C48.665,49.83 49.77,48.23 50.895,46.655 C51.695,45.525 52.705,45.385 53.765,45.785 C54.845,46.16 60.56,48.985 61.735,49.57 C62.91,50.16 63.685,50.44 63.97,50.935 C64.25,51.43 64.25,53.755 63.285,56.485 Z" id="-IcWhatsapp" fill={FillColor}></path>
                 </g>
             </svg>
+        )
+    }
+}
+
+export class IcBurgerMenu extends React.Component {
+    render() {
+        return (
+            <IcBurgerMenuWrapper type={"button"}>
+                <SpanWrapper>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </SpanWrapper>
+                <p>Menu</p>
+            </IcBurgerMenuWrapper>
         )
     }
 }

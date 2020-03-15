@@ -1,7 +1,7 @@
 import React from 'react';
 import "./reset.css";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import GlobalFonts from "./Atoms/globalStyle";
+import GlobalFonts from "./components/Atoms/globalStyle";
 import {HeaderNavigation} from "./components/headernavigation/headernavigation";
 import {Footer} from "./components/footer/footer";
 import {HomePage} from "./components/pages/homepage";

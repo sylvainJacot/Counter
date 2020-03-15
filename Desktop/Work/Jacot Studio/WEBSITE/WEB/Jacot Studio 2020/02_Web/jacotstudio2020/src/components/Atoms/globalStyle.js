@@ -4,11 +4,11 @@ import {createGlobalStyle} from "styled-components";
 import {media} from "./mediaqueries";
 import {colorsRoles} from "./colors";
 
-import PlayfairDisplayBlack from "../Atoms/fonts/Playfair_Display/PlayfairDisplay-Black.woff";
-import PlayfairDisplayBlack2 from "../Atoms/fonts/Playfair_Display/PlayfairDisplay-Black.woff2";
+import PlayfairDisplayBlack from "./fonts/Playfair_Display/PlayfairDisplay-Black.woff";
+import PlayfairDisplayBlack2 from "./fonts/Playfair_Display/PlayfairDisplay-Black.woff2";
 
-import RobotoRegular from "../Atoms/fonts/Roboto/Roboto-Regular.woff";
-import RobotoRegular2 from "../Atoms/fonts/Roboto/Roboto-Regular.woff";
+import RobotoRegular from "./fonts/Roboto/Roboto-Regular.woff";
+import RobotoRegular2 from "./fonts/Roboto/Roboto-Regular.woff";
 
 export default createGlobalStyle`
 
