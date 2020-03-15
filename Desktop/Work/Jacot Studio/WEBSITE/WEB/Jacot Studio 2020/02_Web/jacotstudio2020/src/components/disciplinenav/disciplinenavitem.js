@@ -43,7 +43,7 @@ position: absolute;
 bottom: -16px;
 width: 100%;
 height: 160px;
-${props => props.BottomGradient}
+${props => props.bottomGradient}
 /*${gradient.Brand0130};*/
 }
 
@@ -94,7 +94,7 @@ bottom: -8px;
 right: 0;
 width: 40px;
 height: 2px;
-background-color: ${props => props.ColorBrand};
+background-color: ${props => props.colorBrand};
 ${media.tablet`
 bottom: -16px;
 `}
@@ -194,27 +194,27 @@ top: 0;
 right: 0;
 left: 0;
 bottom: 0;
-background-color: ${props => props.ColorBrand}16;
+background-color: ${props => props.colorBrand}16;
 `;
 
 export class DisciplineNavItem extends React.Component {
     render() {
-        const {ColorBrand,BottomGradient} = this.props;
+        const {colorBrand,bottomGradient,key} = this.props;
         return (
-              <DisciplineNavItemWrapper BottomGradient={BottomGradient}>
+              <DisciplineNavItemWrapper bottomGradient={bottomGradient} key={key}>
                   <StyledLink to="/Frontend">
 
-                      <DisciplineNavItemText ColorBrand={ColorBrand}>
+                      <DisciplineNavItemText colorBrand={colorBrand}>
 
-                          <h1>{this.props.Title1}<br/>{this.props.Title2}</h1>
-                          <p>{this.props.Quote}</p>
+                          <h1>{this.props.title}</h1>
+                          <p>{this.props.quote}</p>
 
                       </DisciplineNavItemText>
 
                       <img alt="Parrot picture" src={Parrot} />
 
                       <ImgShadow/>
-                      <BrandBackground ColorBrand={ColorBrand}/>
+                      <BrandBackground colorBrand={colorBrand}/>
 
                   </StyledLink>
 

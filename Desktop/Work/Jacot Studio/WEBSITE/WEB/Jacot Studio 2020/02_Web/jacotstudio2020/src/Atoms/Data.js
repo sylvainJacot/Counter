@@ -2,26 +2,32 @@ import React from "react";
 
 import {colorsRoles, gradient} from "./colors";
 
+const WrapTextDesign = (
+    <>
+        UX/UI
+        <br />
+        Designer
+    </>
+);
+
 export const navigationDiscipline =  [
     {
-        Title1: "UX/UI",
-        Title2: "Designer",
-        Quote: "Lorem ipsum UX/UI Designer",
-        Color: colorsRoles.Brand01,
-        BottomGradient: gradient.Brand0130,
+        title: WrapTextDesign,
+        quote: "Lorem ipsum UX/UI Designer",
+        color: colorsRoles.Brand01,
+        bottomGradient: gradient.Brand0130,
     },
     {
-        Title1: "Creative",
-        Title2: "Developer",
-        Quote: "Lorem ipsum Creative Developer",
-        Color: colorsRoles.Brand02,
-        BottomGradient: gradient.Brand0230,
+        title: "Creative",
+        quote: "Lorem ipsum Creative Developer",
+        color: colorsRoles.Brand02,
+        bottomGradient: gradient.Brand0230,
     },
     {
-        Title1: "Photo",
-        Title2: "Retoucher",
-        Quote: "Lorem ipsum Photo Retoucher",
-        Color: colorsRoles.Brand03,
-        BottomGradient: gradient.Brand0330,
+        title: "Photo",
+        quote: "Lorem ipsum Photo Retoucher",
+        color: colorsRoles.Brand03,
+        bottomGradient: gradient.Brand0330,
     },
+
 ]

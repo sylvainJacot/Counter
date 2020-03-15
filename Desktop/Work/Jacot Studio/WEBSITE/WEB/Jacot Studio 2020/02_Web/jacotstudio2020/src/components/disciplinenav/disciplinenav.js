@@ -47,13 +47,13 @@ export class DisciplineNav extends React.Component {
                     <DisciplineNavList>
 
                         {
-                            navigationDiscipline.map((Item) =>
+                            navigationDiscipline.map((item, index) =>
                                 <DisciplineNavItem
-                                    Title1={Item.Title1}
-                                    Title2={Item.Title2}
-                                    Quote={Item.Quote}
-                                    ColorBrand={Item.Color}
-                                    BottomGradient={Item.BottomGradient}
+                                    key={index}
+                                    title={item.title}
+                                    quote={item.quote}
+                                    colorBrand={item.color}
+                                    bottomGradient={item.bottomGradient}
                                 />
                             )
                         }
