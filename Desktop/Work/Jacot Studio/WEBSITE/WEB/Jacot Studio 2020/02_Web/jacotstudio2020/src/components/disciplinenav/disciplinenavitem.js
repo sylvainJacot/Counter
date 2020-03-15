@@ -180,11 +180,12 @@ width: 80%;
 height: 40px;
 bottom: 80px;
 right: 50%;
+z-index: 10;
 transform: translate(50%,0);
 transition: ${transitions.basic1}
 ${backgrounds.RadialBg02};
 ${media.desktop`
-display: "block";
+display: block;
 animation: ${Breathe} 5s linear infinite;
 `}
 `;
