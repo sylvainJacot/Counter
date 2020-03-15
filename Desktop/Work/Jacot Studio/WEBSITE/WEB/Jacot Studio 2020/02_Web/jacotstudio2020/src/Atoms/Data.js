@@ -9,6 +9,20 @@ const WrapTextDesign = (
         Designer
     </>
 );
+const WrapTextFront = (
+    <>
+        Creative
+        <br />
+        Developper
+    </>
+);
+const WrapTextRetouch = (
+    <>
+        Photo
+        <br />
+        Retoucher
+    </>
+);
 
 export const navigationDiscipline =  [
     {
@@ -18,13 +32,13 @@ export const navigationDiscipline =  [
         bottomGradient: gradient.Brand0130,
     },
     {
-        title: "Creative",
+        title: WrapTextFront,
         quote: "Lorem ipsum Creative Developer",
         color: colorsRoles.Brand02,
         bottomGradient: gradient.Brand0230,
     },
     {
-        title: "Photo",
+        title: WrapTextRetouch,
         quote: "Lorem ipsum Photo Retoucher",
         color: colorsRoles.Brand03,
         bottomGradient: gradient.Brand0330,

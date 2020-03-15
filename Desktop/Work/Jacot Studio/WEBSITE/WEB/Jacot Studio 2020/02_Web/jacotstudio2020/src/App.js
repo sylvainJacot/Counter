@@ -1,8 +1,11 @@
 import React from 'react';
 import "./reset.css";
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import GlobalFonts from "./Atoms/globalStyle";
-import {BodyWrapper} from "./components/bodywrapper";
+import {HeaderNavigation} from "./components/headernavigation/headernavigation";
+import {Footer} from "./components/footer/footer";
+import {HomePage} from "./components/pages/homepage";
+import {FrontendHomePage} from "./components/pages/frontendhomepage";
 
 
 function App() {
@@ -10,7 +13,12 @@ function App() {
       <Router>
           <div className="App">
               <GlobalFonts/>
-              <BodyWrapper/>
+              <HeaderNavigation/>
+              <Switch>
+                  <Route exact path="/" component={HomePage}/>
+                  <Route path="/Frontend" component={FrontendHomePage}/>
+              </Switch>
+              <Footer/>
           </div>
       </Router>
   );
