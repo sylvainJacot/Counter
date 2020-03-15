@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {media} from "../../Atoms/mediaqueries";
 import {transitions} from "../../Atoms/animations";
 import {DisciplineNavItem} from "./disciplinenavitem";
+import {navigationDiscipline} from "../../Atoms/Data";
 
 export const DisciplineNavWrapper = styled.nav`
 height: 100%;
@@ -45,9 +46,17 @@ export class DisciplineNav extends React.Component {
 
                     <DisciplineNavList>
 
-                        <DisciplineNavItem/>
-                        <DisciplineNavItem/>
-                        <DisciplineNavItem/>
+                        {
+                            navigationDiscipline.map((item, index) =>
+                                <DisciplineNavItem
+                                    key={index}
+                                    title={item.title}
+                                    quote={item.quote}
+                                    colorBrand={item.color}
+                                    bottomGradient={item.bottomGradient}
+                                />
+                            )
+                        }
 
                     </DisciplineNavList>
 
@@ -57,3 +66,4 @@ export class DisciplineNav extends React.Component {
         )
     }
 }
+

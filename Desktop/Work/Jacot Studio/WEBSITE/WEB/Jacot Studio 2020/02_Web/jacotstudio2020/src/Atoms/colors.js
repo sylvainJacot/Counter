@@ -10,6 +10,8 @@ export const colors = {
 
 export const colorsRoles = {
     Brand01 : colors.Yellow,
+    Brand02 : colors.Red,
+    Brand03 : colors.Purple,
     White : colors.White,
     DarkGrey: colors.DarkGrey,
     LightGrey : colors.LightGrey,
@@ -18,6 +20,8 @@ export const colorsRoles = {
 
 export const gradient = {
     Brand0130 : "background-image: linear-gradient(0deg, #F9CA1C 0%, rgba(250,209,42,0.00) 100%); opacity: 30%",
+    Brand0230 : "background-image: linear-gradient(0deg, #FA2A62 0%, rgba(250,209,42,0.00) 100%); opacity: 30%",
+    Brand0330 : "background-image: linear-gradient(0deg, #5B2AFA 0%, rgba(250,209,42,0.00) 100%); opacity: 30%",
 }
 
 export  const backgrounds = {

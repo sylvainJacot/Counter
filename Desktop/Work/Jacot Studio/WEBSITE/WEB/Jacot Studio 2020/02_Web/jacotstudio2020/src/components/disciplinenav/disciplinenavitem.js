@@ -43,7 +43,8 @@ position: absolute;
 bottom: -16px;
 width: 100%;
 height: 160px;
-${gradient.Brand0130};
+${props => props.bottomGradient}
+/*${gradient.Brand0130};*/
 }
 
 `;
@@ -93,7 +94,7 @@ bottom: -8px;
 right: 0;
 width: 40px;
 height: 2px;
-background-color: ${colorsRoles.Brand01};
+background-color: ${props => props.colorBrand};
 ${media.tablet`
 bottom: -16px;
 `}
@@ -193,26 +194,27 @@ top: 0;
 right: 0;
 left: 0;
 bottom: 0;
-background-color: ${colorsRoles.Brand01}16;
+background-color: ${props => props.colorBrand}16;
 `;
 
 export class DisciplineNavItem extends React.Component {
     render() {
+        const {colorBrand,bottomGradient,key} = this.props;
         return (
-              <DisciplineNavItemWrapper>
+              <DisciplineNavItemWrapper bottomGradient={bottomGradient} key={key}>
                   <StyledLink to="/Frontend">
 
-                      <DisciplineNavItemText>
+                      <DisciplineNavItemText colorBrand={colorBrand}>
 
-                          <h1>UI/UX <br/>Developper</h1>
-                          <p>What language is lorem ipsum ?</p>
+                          <h1>{this.props.title}</h1>
+                          <p>{this.props.quote}</p>
 
                       </DisciplineNavItemText>
 
                       <img alt="Parrot picture" src={Parrot} />
 
                       <ImgShadow/>
-                      <BrandBackground/>
+                      <BrandBackground colorBrand={colorBrand}/>
 
                   </StyledLink>
 
