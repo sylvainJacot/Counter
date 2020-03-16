@@ -3,11 +3,10 @@ import {colorsRoles} from "./colors";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 import {transitions} from "./animations";
+import {media} from "./mediaqueries";
 
 export const SpanWrapper = styled.div``;
 export const IcBurgerMenuWrapper = styled(Link)`
-width: 80px;
-height: 80px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -15,30 +14,47 @@ align-items: center;
 background-color: unset;
 border: unset;
 cursor: pointer;
+    ${media.desktop`
+    width: 80px;
+    height: 80px;
+    `}
 
 & ${SpanWrapper} {
 display: flex;
+${media.desktop`
 margin-bottom: 8px;
+`}
     & span {
     display: block;
     width: 3px;
-    height: 16px;
+    height: 24px;
     border-radius: 0 0 100px 0;
     background-color: ${colorsRoles.LightGrey};
     transition: ${transitions.basic2};
+    ${media.desktop`
+    margin-bottom: 8px;
+    height: 16px;
+    `}
     }
         & :nth-child(2) {
-    margin: 0 4px;
+    margin: 0 8px;
     border-radius: 100px 0 0 0;
     }
+        ${media.desktop`
+        margin: 0 4px;
+    `}
 }
 & p {
+display: none;
+${media.desktop`
+display: inline;
 font-family: Roboto-Bold;
 font-size: 2rem;
 color: ${colorsRoles.LightGrey};
 letter-spacing: 4px;
 text-align: center;
 text-transform: uppercase;
+`}
 }
 `;
 

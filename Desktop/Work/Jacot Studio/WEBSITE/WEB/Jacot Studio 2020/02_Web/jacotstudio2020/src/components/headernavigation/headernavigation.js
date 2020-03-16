@@ -4,22 +4,32 @@ import {colorsRoles} from "../Atoms/colors";
 import {LogoJacotStudio, IcBurgerMenu, IcLinkedin, IcInstagram, IcWhatsapp} from "../Atoms/icons";
 import {transitions} from "../Atoms/animations";
 import {Link} from "react-router-dom";
+import {media} from "../Atoms/mediaqueries";
 
 export const StyledLink = styled(Link)``;
 export const HeaderWrapper = styled.header`
 position: fixed;
 display: flex;
-align-items: center;
 justify-content: space-between;
-flex-direction: column;
-z-index: 2;
+align-items: center;
 right: 0;
+left: 0;
 top: 0;
-bottom: 0;
-width: 80px;
+height: 64px;
+z-index: 2;
 background-color: ${colorsRoles.DarkGrey};
-padding: 32px 0;
+padding: 0 16px;
 transition: ${transitions.basic2};
+
+${media.desktop `
+width: 80px;
+height: unset;
+padding: 32px 0;
+right: 0;
+bottom: 0;
+left: unset;
+flex-direction: column;
+`}
 
 &::after {
 display: block;
@@ -32,7 +42,8 @@ bottom: 0;
 left: 0;
 background-color: ${colorsRoles.White}10;
 }
-&:hover {
+${media.desktop `
+    &:hover {
 width: 144px;
 transition: ${transitions.basic2};
 
@@ -46,16 +57,22 @@ transition: ${transitions.basic2};
   } 
 
 }
+`}
+
 
 `;
 export const SocialsWrapper = styled.ul`
+display: none;
+${media.desktop`
 display: flex;
 flex-direction: column;
+`}
 a {
 margin-bottom: 40px;
 &:last-child {
 margin-bottom: 0px;
 }
+
 }
 
 
