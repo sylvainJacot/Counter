@@ -42,7 +42,8 @@ bottom: 0;
 left: 0;
 background-color: ${colorsRoles.White}10;
 }
-&:hover {
+${media.desktop `
+    &:hover {
 width: 144px;
 transition: ${transitions.basic2};
 
@@ -56,6 +57,8 @@ transition: ${transitions.basic2};
   } 
 
 }
+`}
+
 
 `;
 export const SocialsWrapper = styled.ul`
