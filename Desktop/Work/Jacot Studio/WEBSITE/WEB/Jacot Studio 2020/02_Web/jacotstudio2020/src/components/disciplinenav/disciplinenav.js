@@ -6,9 +6,11 @@ import {DisciplineNavItem} from "./disciplinenavitem";
 import {navigationDiscipline} from "../Atoms/Data";
 
 export const DisciplineNavWrapper = styled.nav`
-height: 100%;
+margin-top: 64px;
+${media.desktop`
+margin-top: unset;
 margin-right: 80px;
-/*margin-right: ${props => props.headerNavWidth}px; */
+`}
 `;
 
 export const DisciplineNavList = styled.ul`
