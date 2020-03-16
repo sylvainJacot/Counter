@@ -1,6 +1,6 @@
 import React from 'react';
 import "./reset.css";
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import GlobalFonts from "./components/Atoms/globalStyle";
 import {Footer} from "./components/footer/footer";
 import {FrontendHomePage} from "./components/pages/frontendhomepage";
@@ -11,7 +11,6 @@ import HeaderNavigation from "./components/headernavigation/headernavigation";
 
 function App() {
   return (
-      <Router>
           <div className="App">
               <GlobalFonts/>
               <HeaderNavigation/>
@@ -22,7 +21,6 @@ function App() {
               </Switch>
               <Footer/>
           </div>
-      </Router>
   );
 }
 

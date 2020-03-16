@@ -80,13 +80,13 @@ margin-bottom: 0px;
 
 `;
 
-const HeaderNavigation = ({menuNav}) => {
+const HeaderNavigation = ({currentStateMenuNav}) => {
     return <>
                 <HeaderWrapper>
                     <StyledLink to={"/"}>
                         <h1><LogoJacotStudio FillColor={colorsRoles.White} CircleColor={colorsRoles.LightGrey} Size={"40px"}/></h1>
                     </StyledLink>
-                 <IcBurgerMenu menuNav={menuNav}/>
+                 <IcBurgerMenu menuNav={currentStateMenuNav}/>
                 <SocialsWrapper>
                     <a href="https://bashooka.com/coding/react-burger-menu-components/"><IcLinkedin FillColor={colorsRoles.LightGrey} Size={"24px"}/></a>
                     <a href="#"><IcInstagram FillColor={colorsRoles.LightGrey} Size={"24px"}/></a>
