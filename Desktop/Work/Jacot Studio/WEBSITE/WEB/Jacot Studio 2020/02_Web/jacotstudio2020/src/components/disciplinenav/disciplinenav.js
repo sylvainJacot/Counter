@@ -35,16 +35,11 @@ transition: ${transitions.basic2};
 
 `;
 
-export class DisciplineNav extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
+export class DisciplineNavHome extends React.Component {
     render() {
-        const {headerNavWidth} = this.props;
         return (
             <>
-                <DisciplineNavWrapper headerNavWidth={headerNavWidth}>
+                <DisciplineNavWrapper>
 
                     <DisciplineNavList>
 
