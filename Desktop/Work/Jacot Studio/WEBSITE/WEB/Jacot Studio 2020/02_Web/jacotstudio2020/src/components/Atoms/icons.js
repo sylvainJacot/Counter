@@ -1,10 +1,11 @@
 import React from "react";
 import {colorsRoles} from "./colors";
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 import {transitions} from "./animations";
 
 export const SpanWrapper = styled.div``;
-export const IcBurgerMenuWrapper = styled.button`
+export const IcBurgerMenuWrapper = styled(Link)`
 width: 80px;
 height: 80px;
 display: flex;
@@ -100,7 +101,7 @@ export class IcWhatsapp extends React.Component {
 export class IcBurgerMenu extends React.Component {
     render() {
         return (
-            <IcBurgerMenuWrapper type={"button"}>
+            <IcBurgerMenuWrapper to="/About">
                 <SpanWrapper>
                     <span></span>
                     <span></span>

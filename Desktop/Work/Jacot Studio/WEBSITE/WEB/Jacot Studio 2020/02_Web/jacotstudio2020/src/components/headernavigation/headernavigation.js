@@ -3,8 +3,9 @@ import styled from "styled-components";
 import {colorsRoles} from "../Atoms/colors";
 import {LogoJacotStudio, IcBurgerMenu, IcLinkedin, IcInstagram, IcWhatsapp} from "../Atoms/icons";
 import {transitions} from "../Atoms/animations";
+import {Link} from "react-router-dom";
 
-
+export const StyledLink = styled(Link)``;
 export const HeaderWrapper = styled.header`
 position: fixed;
 display: flex;
@@ -65,7 +66,9 @@ export class HeaderNavigation extends React.Component {
         return (
             <>
                 <HeaderWrapper>
-                 <LogoJacotStudio FillColor={colorsRoles.White} CircleColor={colorsRoles.LightGrey} Size={"40px"}/>
+                    <StyledLink to={"/"}>
+                        <h1><LogoJacotStudio FillColor={colorsRoles.White} CircleColor={colorsRoles.LightGrey} Size={"40px"}/></h1>
+                    </StyledLink>
                  <IcBurgerMenu/>
                 <SocialsWrapper>
                     <a href="https://bashooka.com/coding/react-burger-menu-components/"><IcLinkedin FillColor={colorsRoles.LightGrey} Size={"24px"}/></a>
@@ -73,7 +76,6 @@ export class HeaderNavigation extends React.Component {
                     <a href="#"><IcWhatsapp FillColor={colorsRoles.LightGrey} Size={"24px"}/></a>
                 </SocialsWrapper>
                 </HeaderWrapper>
-                {this.props.children}
             </>
         )
     }

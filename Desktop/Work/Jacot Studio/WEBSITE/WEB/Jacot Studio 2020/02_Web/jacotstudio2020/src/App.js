@@ -6,6 +6,7 @@ import {HeaderNavigation} from "./components/headernavigation/headernavigation";
 import {Footer} from "./components/footer/footer";
 import {HomePage} from "./components/pages/homepage";
 import {FrontendHomePage} from "./components/pages/frontendhomepage";
+import {AboutPage} from "./components/pages/aboutepage";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
               <Switch>
                   <Route exact path="/" component={HomePage}/>
                   <Route path="/Frontend" component={FrontendHomePage}/>
+                  <Route path="/About" component={AboutPage}/>
               </Switch>
               <Footer/>
           </div>
