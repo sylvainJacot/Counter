@@ -22,7 +22,7 @@ Switch is a bit like "If...else.."
         case 'ACTIVATE_MENU_NAV':
             return {
                 ...state,
-                menuNav: action.payload;
+                menuNav: action.payload
             }
 
         default :
