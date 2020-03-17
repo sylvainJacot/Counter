@@ -42,7 +42,7 @@ const DisciplineNav = (currentStateMenuNav) => {
         return <>
                 <DisciplineNavWrapper>
 
-                    { currentStateMenuNav ? <Square/>  : null }
+                    { currentStateMenuNav && <Square/> }
 
                     <DisciplineNavList>
 
