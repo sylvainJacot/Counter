@@ -83,18 +83,33 @@ margin-bottom: 0px;
 const HeaderNavigation = ({currentStateMenuNav}) => {
     return <>
                 <HeaderWrapper>
+
                     <StyledLink to={"/"}>
-                        <h1><LogoJacotStudio FillColor={colorsRoles.White} CircleColor={colorsRoles.LightGrey} Size={"40px"}/></h1>
+                        <h1>
+                            <LogoJacotStudio FillColor={colorsRoles.White} CircleColor={colorsRoles.LightGrey} Size={"40px"}/>
+                        </h1>
                     </StyledLink>
+
                  <IcBurgerMenu menuNav={currentStateMenuNav}/>
+
                 <SocialsWrapper>
-                    <a href="https://bashooka.com/coding/react-burger-menu-components/"><IcLinkedin FillColor={colorsRoles.LightGrey} Size={"24px"}/></a>
-                    <a href="#"><IcInstagram FillColor={colorsRoles.LightGrey} Size={"24px"}/></a>
-                    <a href="#"><IcWhatsapp FillColor={colorsRoles.LightGrey} Size={"24px"}/></a>
+                    <a href="#">
+                        <IcLinkedin FillColor={colorsRoles.LightGrey} Size={"24px"}/>
+                    </a>
+                    <a href="#">
+                        <IcInstagram FillColor={colorsRoles.LightGrey} Size={"24px"}/>
+                    </a>
+                    <a href="#">
+                        <IcWhatsapp FillColor={colorsRoles.LightGrey} Size={"24px"}/>
+                    </a>
                 </SocialsWrapper>
                 </HeaderWrapper>
      </>
 };
+
+/* REDUX =============== INJECT THE STATE INTO THE COMPONENT
+   connect () a 2 arguments -> MapStateToProps et MapDispatchToProps
+ */
 
 const MapStateToProps = state => ({
     currentStateMenuNav : state.menuNav.currentStateMenuNav
