@@ -35,7 +35,7 @@ transition: ${transitions.basic2};
 
 `;
 
-export class DisciplineNavHome extends React.Component {
+export class DisciplineNav extends React.Component {
     render() {
         return (
             <>
@@ -51,6 +51,7 @@ export class DisciplineNavHome extends React.Component {
                                     quote={item.quote}
                                     colorBrand={item.color}
                                     bottomGradient={item.bottomGradient}
+                                    altImg={item.altImg}
                                 />
                             )
                         }
