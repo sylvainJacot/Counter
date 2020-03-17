@@ -5,8 +5,9 @@ import {Link} from "react-router-dom";
 import {transitions} from "./animations";
 import {media} from "./mediaqueries";
 
+
 export const SpanWrapper = styled.div``;
-export const IcBurgerMenuWrapper = styled(Link)`
+export const IcBurgerMenuWrapper = styled.button`
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -114,19 +115,17 @@ export class IcWhatsapp extends React.Component {
     }
 }
 
-export class IcBurgerMenu extends React.Component {
-    render() {
-        return (
-            <IcBurgerMenuWrapper to="/About">
-                <SpanWrapper>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </SpanWrapper>
-                <p>Menu</p>
-            </IcBurgerMenuWrapper>
-        )
-    }
+const IcBurgerMenu = () => {
+        return <>
+                <IcBurgerMenuWrapper>
+                    <SpanWrapper>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </SpanWrapper>
+                    <p>Menu</p>
+                </IcBurgerMenuWrapper>
+            </>
 }
-
+export default IcBurgerMenu;
 

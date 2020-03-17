@@ -1,12 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+
 import {connect} from "react-redux";
+import mapDispatchToProps from "react-redux/lib/connect/mapDispatchToProps";
+import {toggleMenuNav} from '../../redux/menuNav/menuNav-actions';
+
 import {colorsRoles} from "../Atoms/colors";
-import {LogoJacotStudio, IcBurgerMenu, IcLinkedin, IcInstagram, IcWhatsapp} from "../Atoms/icons";
+import {LogoJacotStudio, IcLinkedin, IcInstagram, IcWhatsapp} from "../Atoms/icons";
+import IcBurgerMenu from "../Atoms/icons";
 import {transitions} from "../Atoms/animations";
 import {Link} from "react-router-dom";
 import {media} from "../Atoms/mediaqueries";
-import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
+
 
 export const StyledLink = styled(Link)``;
 export const HeaderWrapper = styled.header`
@@ -80,7 +85,18 @@ margin-bottom: 0px;
 
 `;
 
-const HeaderNavigation = ({currentStateMenuNav}) => {
+export const Button = styled.button`
+
+`;
+
+
+const HeaderNavigation = ({toggleMenuNav}) => {
+
+   /* function handleClick(state) {
+        alert("Clicked");
+        currentStateMenuNav = !currentStateMenuNav
+    } */
+
     return <>
                 <HeaderWrapper>
 
@@ -90,7 +106,8 @@ const HeaderNavigation = ({currentStateMenuNav}) => {
                         </h1>
                     </StyledLink>
 
-                 <IcBurgerMenu menuNav={currentStateMenuNav}/>
+                 <IcBurgerMenu/>
+                 <Button onClick={toggleMenuNav}>Test Redux</Button>
 
                 <SocialsWrapper>
                     <a href="#">
@@ -111,8 +128,8 @@ const HeaderNavigation = ({currentStateMenuNav}) => {
    connect () a 2 arguments -> MapStateToProps et MapDispatchToProps
  */
 
-const MapStateToProps = state => ({
-    currentStateMenuNav : state.menuNav.currentStateMenuNav
+const MapDispatchToProps = dispatch => ({
+    toggleMenuNav : () => dispatch(toggleMenuNav())
 });
 
-export default connect(MapStateToProps)(HeaderNavigation);
+export default connect(null, MapDispatchToProps)(HeaderNavigation);

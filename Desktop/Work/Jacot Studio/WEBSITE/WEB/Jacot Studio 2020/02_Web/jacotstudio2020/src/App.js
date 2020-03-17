@@ -10,7 +10,7 @@ import GlobalFonts from "./components/Atoms/globalStyle";
 import {Footer} from "./components/footer/footer";
 import {FrontendHomePage} from "./components/pages/frontendhomepage";
 import {AboutPage} from "./components/pages/aboutepage";
-import {DisciplineNav} from "./components/disciplinenav/disciplinenav";
+import DisciplineNav from "./components/disciplinenav/disciplinenav";
 import HeaderNavigation from "./components/headernavigation/headernavigation";
 
 

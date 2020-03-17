@@ -1,7 +1,5 @@
-export const toggleMenuNav = menuNav => ({
+// import toggleMenuNavActionTypes from './menuNav-types';
 
-    type: 'ACTIVATE_MENU_NAV', /* Type is like the same than the name */
-    payload: menuNav,
-    index: 1
-
-});
+export const toggleMenuNav = () => ({
+    type: "TOGGLE_MENU_NAV"
+})
