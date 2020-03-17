@@ -200,9 +200,9 @@ background-color: ${props => props.colorBrand}16;
 
 export class DisciplineNavItem extends React.Component {
     render() {
-        const {colorBrand,bottomGradient,key} = this.props;
+        const {colorBrand,bottomGradient,altImg} = this.props;
         return (
-              <DisciplineNavItemWrapper bottomGradient={bottomGradient} key={key}>
+              <DisciplineNavItemWrapper bottomGradient={bottomGradient}>
                   <StyledLink to="/Frontend">
 
                       <DisciplineNavItemText colorBrand={colorBrand}>
@@ -212,7 +212,7 @@ export class DisciplineNavItem extends React.Component {
 
                       </DisciplineNavItemText>
 
-                      <img alt="Parrot picture" src={Parrot} />
+                      <img alt={altImg} src={Parrot} />
 
                       <ImgShadow/>
                       <BrandBackground colorBrand={colorBrand}/>

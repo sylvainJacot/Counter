@@ -1,7 +1,6 @@
 /* seen on https://dev.to/alaskaa/how-to-import-a-web-font-into-your-react-app-with-styled-components-4-1dni */
 
 import {createGlobalStyle} from "styled-components";
-import {media} from "./mediaqueries";
 import {colorsRoles} from "./colors";
 
 import PlayfairDisplayBlack from "./fonts/Playfair_Display/PlayfairDisplay-Black.woff";
