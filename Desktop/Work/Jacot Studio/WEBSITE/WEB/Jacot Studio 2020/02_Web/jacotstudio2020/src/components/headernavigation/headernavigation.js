@@ -84,19 +84,12 @@ margin-bottom: 0px;
 
 
 `;
-
 export const Button = styled.button`
 
 `;
 
 
-const HeaderNavigation = ({toggleMenuNav}) => {
-
-   /* function handleClick(state) {
-        alert("Clicked");
-        currentStateMenuNav = !currentStateMenuNav
-    } */
-
+const HeaderNavigation = ({toggleMenuNav, onClick}) => {
     return <>
                 <HeaderWrapper>
 
@@ -123,6 +116,7 @@ const HeaderNavigation = ({toggleMenuNav}) => {
                 </HeaderWrapper>
      </>
 };
+
 
 /* REDUX =============== INJECT THE STATE INTO THE COMPONENT
    connect () a 2 arguments -> MapStateToProps et MapDispatchToProps
