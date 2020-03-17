@@ -1,5 +1,4 @@
 import {keyframes} from "styled-components";
-import {backgrounds} from "./colors";
 
 export const transitions = {
     basic1 : "0.1s all;",

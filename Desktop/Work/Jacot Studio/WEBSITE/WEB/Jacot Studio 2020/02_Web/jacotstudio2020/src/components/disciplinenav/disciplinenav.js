@@ -36,10 +36,6 @@ transition: ${transitions.basic2};
 `;
 
 export class DisciplineNav extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const {headerNavWidth} = this.props;
         return (
@@ -56,6 +52,7 @@ export class DisciplineNav extends React.Component {
                                     quote={item.quote}
                                     colorBrand={item.color}
                                     bottomGradient={item.bottomGradient}
+                                    altImg={item.altImg}
                                 />
                             )
                         }
