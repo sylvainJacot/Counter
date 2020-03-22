@@ -27,7 +27,7 @@ const WrapTextRetouch = (
 export const navigationDiscipline =  [
     {
         title: WrapTextDesign,
-        quote: "Lorem ipsum UX/UI Designer",
+        quote: "Lorem ipsum UX/UI Designer ezifz iugef zieg fzieg",
         altImg: "Parrot",
         color: colorsRoles.Brand01,
         bottomGradient: gradient.Brand0130,

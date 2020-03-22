@@ -100,7 +100,6 @@ const HeaderNavigation = ({toggleMenuNav}) => {
                     </StyledLink>
 
                  <IcBurgerMenu/>
-                 <Button onClick={toggleMenuNav}>Test Redux</Button>
 
                 <SocialsWrapper>
                     <a href="#">

@@ -4,7 +4,6 @@ import {media} from "../Atoms/mediaqueries";
 import {transitions} from "../Atoms/animations";
 import {DisciplineNavItem} from "./disciplinenavitem";
 import {navigationDiscipline} from "../Atoms/Data";
-import Square from "../../square";
 
 import {connect} from "react-redux";
 
@@ -38,11 +37,9 @@ transition: ${transitions.basic2};
 
 `;
 
-const DisciplineNav = (currentStateMenuNav) => {
+const DisciplineNav = () => {
         return <>
                 <DisciplineNavWrapper>
-
-                    { currentStateMenuNav && <Square/> }
 
                     <DisciplineNavList>
 
