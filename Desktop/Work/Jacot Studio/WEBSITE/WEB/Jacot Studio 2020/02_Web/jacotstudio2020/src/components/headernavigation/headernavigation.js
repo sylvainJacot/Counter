@@ -89,7 +89,7 @@ export const Button = styled.button`
 `;
 
 
-const HeaderNavigation = ({toggleMenuNav, onClick}) => {
+const HeaderNavigation = ({toggleMenuNav}) => {
     return <>
                 <HeaderWrapper>
 
