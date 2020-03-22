@@ -4,6 +4,9 @@ import {media} from "../Atoms/mediaqueries";
 import {transitions} from "../Atoms/animations";
 import {DisciplineNavItem} from "./disciplinenavitem";
 import {navigationDiscipline} from "../Atoms/Data";
+import Square from "../../square";
+
+import {connect} from "react-redux";
 
 export const DisciplineNavWrapper = styled.nav`
 margin-top: 64px;
@@ -35,11 +38,11 @@ transition: ${transitions.basic2};
 
 `;
 
-export class DisciplineNav extends React.Component {
-    render() {
-        return (
-            <>
+const DisciplineNav = (currentStateMenuNav) => {
+        return <>
                 <DisciplineNavWrapper>
+
+                    { currentStateMenuNav && <Square/> }
 
                     <DisciplineNavList>
 
@@ -61,7 +64,15 @@ export class DisciplineNav extends React.Component {
                 </DisciplineNavWrapper>
 
             </>
-        )
-    }
-}
 
+};
+
+/* REDUX =============== INJECT THE STATE INTO THE COMPONENT
+   connect () a 2 arguments -> MapStateToProps et MapDispatchToProps
+ */
+
+const MapStateToProps = ({menuNav : {currentStateMenuNav}}) => ({
+    currentStateMenuNav
+});
+
+export default connect(MapStateToProps)(DisciplineNav);

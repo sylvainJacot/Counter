@@ -1,12 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+
 import {connect} from "react-redux";
+import mapDispatchToProps from "react-redux/lib/connect/mapDispatchToProps";
+import {toggleMenuNav} from '../../redux/menuNav/menuNav-actions';
+
 import {colorsRoles} from "../Atoms/colors";
-import {LogoJacotStudio, IcBurgerMenu, IcLinkedin, IcInstagram, IcWhatsapp} from "../Atoms/icons";
+import {LogoJacotStudio, IcLinkedin, IcInstagram, IcWhatsapp} from "../Atoms/icons";
+import IcBurgerMenu from "../Atoms/icons";
 import {transitions} from "../Atoms/animations";
 import {Link} from "react-router-dom";
 import {media} from "../Atoms/mediaqueries";
-import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
+
 
 export const StyledLink = styled(Link)``;
 export const HeaderWrapper = styled.header`
@@ -79,25 +84,46 @@ margin-bottom: 0px;
 
 
 `;
+export const Button = styled.button`
 
-const HeaderNavigation = ({currentStateMenuNav}) => {
+`;
+
+
+const HeaderNavigation = ({toggleMenuNav}) => {
     return <>
                 <HeaderWrapper>
+
                     <StyledLink to={"/"}>
-                        <h1><LogoJacotStudio FillColor={colorsRoles.White} CircleColor={colorsRoles.LightGrey} Size={"40px"}/></h1>
+                        <h1>
+                            <LogoJacotStudio FillColor={colorsRoles.White} CircleColor={colorsRoles.LightGrey} Size={"40px"}/>
+                        </h1>
                     </StyledLink>
-                 <IcBurgerMenu menuNav={currentStateMenuNav}/>
+
+                 <IcBurgerMenu/>
+                 <Button onClick={toggleMenuNav}>Test Redux</Button>
+
                 <SocialsWrapper>
-                    <a href="https://bashooka.com/coding/react-burger-menu-components/"><IcLinkedin FillColor={colorsRoles.LightGrey} Size={"24px"}/></a>
-                    <a href="#"><IcInstagram FillColor={colorsRoles.LightGrey} Size={"24px"}/></a>
-                    <a href="#"><IcWhatsapp FillColor={colorsRoles.LightGrey} Size={"24px"}/></a>
+                    <a href="#">
+                        <IcLinkedin FillColor={colorsRoles.LightGrey} Size={"24px"}/>
+                    </a>
+                    <a href="#">
+                        <IcInstagram FillColor={colorsRoles.LightGrey} Size={"24px"}/>
+                    </a>
+                    <a href="#">
+                        <IcWhatsapp FillColor={colorsRoles.LightGrey} Size={"24px"}/>
+                    </a>
                 </SocialsWrapper>
                 </HeaderWrapper>
      </>
 };
 
-const MapStateToProps = state => ({
-    currentStateMenuNav : state.menuNav.currentStateMenuNav
+
+/* REDUX =============== INJECT THE STATE INTO THE COMPONENT
+   connect () a 2 arguments -> MapStateToProps et MapDispatchToProps
+ */
+
+const MapDispatchToProps = dispatch => ({
+    toggleMenuNav : () => dispatch(toggleMenuNav())
 });
 
-export default connect(MapStateToProps)(HeaderNavigation);
+export default connect(null, MapDispatchToProps)(HeaderNavigation);

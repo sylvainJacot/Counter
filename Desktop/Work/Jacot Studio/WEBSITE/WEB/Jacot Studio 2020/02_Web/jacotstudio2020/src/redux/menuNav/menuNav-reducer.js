@@ -1,15 +1,15 @@
-
 const INITIAL_STATE = {
-    currentStateMenuNav : false,
+    currentStateMenuNav : true,
 }
 
 const menuNavReducer = (state = INITIAL_STATE, action) => {
 
     switch (action.type) {
-        case 'ACTIVATE_MENU_NAV ':
+        case 'TOGGLE_MENU_NAV':
             return {
                 ...state,
-                currentStateMenuNav: action.payload
+                currentStateMenuNav: !state.currentStateMenuNav
+                /* No need to pass the payload because it is just true/false state */
             };
 
      default :
