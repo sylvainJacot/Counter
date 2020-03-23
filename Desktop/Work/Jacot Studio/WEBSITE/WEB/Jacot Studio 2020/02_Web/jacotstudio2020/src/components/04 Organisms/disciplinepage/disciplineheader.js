@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import {images} from "../../01 Atoms/images";
 import {media} from "../../01 Atoms/mediaqueries";
 import {colorsRoles, backgrounds, gradient} from "../../01 Atoms/colors";
 import {transitions} from "../../01 Atoms/animations";
@@ -32,8 +31,10 @@ ${media.desktop`
 padding: unset;
 align-items: unset;
 padding-top: 80px;
-flex-direction: unset;
-justify-content: center;
+margin-right: 80px;
+flex-wrap: wrap;
+align-items: unset;
+flex-direction: column;
 `}
 
 `
@@ -41,6 +42,10 @@ export const HeaderMain = styled.main`
 display: flex;
 flex-direction: column;
 align-items: center;
+${media.desktop`
+flex-direction: row;
+justify-content: center;
+`}
 `;
 export const Picture = styled.img`
 width: 200%;
@@ -57,18 +62,19 @@ width: 184px;
 height: 276px;
 background-color: ${colorsRoles.DarkGrey};
 overflow: hidden;
-box-shadow: -8px 8px 0px 0px ${colorsRoles.Brand01};
+box-shadow: -8px 8px 0px 0px ${props => props.MainColor};
 ${media.desktop`
 width: 308px;
 height: 456px;
-box-shadow: -16px 16px 0px 0px ${colorsRoles.Brand01};
+transform: scale(.9);
+box-shadow: -16px 16px 0px 0px ${props => props.MainColor};
 `}
 &:after {
 content: "";
 display: block;
 position: absolute;
-width: 100%;
-height: 100%;
+width: 140%;
+height: 140%;
 top: -80%;
 ${backgrounds.RadialBg01};
 }
@@ -140,23 +146,32 @@ grid-template-columns: repeat(2, 1fr);
 align-items: center;
 grid-column-gap: 80px;
 ${media.tablet`
-grid-template-columns: repeat(4, 1fr);
+margin-top: 40px;
+margin-bottom: 48px;
+grid-template-columns: repeat(4, 80px);
+justify-items: end;
 `}
+${media.desktop`
+margin-top: 80px;
+width: 100%;
+align-items: unset;
+justify-content: center;
+`}
+
 
 `;
 
 
-const DisciplineHeader = () => {
+const DisciplineHeader = (props) => {
     return <>
             <HeaderWrapper>
                 <HeaderMain>
-                    <DisciplinePictureWrapper>
-                        <Picture src={images.Parrot} />
+                    <DisciplinePictureWrapper MainColor={props.MainColor}>
+                        <Picture src={props.Picture} />
                     </DisciplinePictureWrapper>
                     <TextContent>
-                        <h1>UI Designer</h1>
-                        <p>Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have.
-                        </p>
+                        <h1>{props.Title}</h1>
+                        <p>{props.Texte}</p>
                     </TextContent>
                 </HeaderMain>
                 <LogosWrapper>
