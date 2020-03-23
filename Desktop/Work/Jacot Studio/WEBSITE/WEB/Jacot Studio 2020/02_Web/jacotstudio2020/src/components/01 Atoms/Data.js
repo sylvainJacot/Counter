@@ -1,6 +1,7 @@
 import React from "react";
 
 import {colorsRoles, gradient} from "./colors";
+import {images} from "./images";
 
 const WrapTextDesign = (
     <>
@@ -32,6 +33,7 @@ export const navigationDiscipline =  [
         color: colorsRoles.Brand01,
         bottomGradient: gradient.Brand0130,
         labelCTA: "Learn more",
+        src: images.Parrot,
     },
     {
         title: WrapTextFront,
@@ -40,6 +42,7 @@ export const navigationDiscipline =  [
         color: colorsRoles.Brand02,
         bottomGradient: gradient.Brand0230,
         labelCTA: "Learn",
+        src: images.Parrot,
     },
     {
         title: WrapTextRetouch,
@@ -48,6 +51,7 @@ export const navigationDiscipline =  [
         color: colorsRoles.Brand03,
         bottomGradient: gradient.Brand0330,
         labelCTA: "Learn more",
+        src: images.Parrot,
     },
 
 ]
