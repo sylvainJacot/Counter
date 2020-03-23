@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 import {connect} from "react-redux";
 import mapDispatchToProps from "react-redux/lib/connect/mapDispatchToProps";
-import {toggleMenuNav} from '../../redux/menuNav/menuNav-actions';
+import {toggleMenuNav} from '../../../redux/menuNav/menuNav-actions';
 
-import {colorsRoles} from "../Atoms/colors";
-import {LogoJacotStudio, IcLinkedin, IcInstagram, IcWhatsapp} from "../Atoms/icons";
-import IcBurgerMenu from "../Atoms/icons";
-import {transitions} from "../Atoms/animations";
+import {colorsRoles} from "../../01 Atoms/colors";
+import {LogoJacotStudio, IcLinkedin, IcInstagram, IcWhatsapp} from "../../01 Atoms/icons";
+import IcBurgerMenu from "../../01 Atoms/icons";
+import {transitions} from "../../01 Atoms/animations";
 import {Link} from "react-router-dom";
-import {media} from "../Atoms/mediaqueries";
+import {media} from "../../01 Atoms/mediaqueries";
 
 
 export const StyledLink = styled(Link)``;

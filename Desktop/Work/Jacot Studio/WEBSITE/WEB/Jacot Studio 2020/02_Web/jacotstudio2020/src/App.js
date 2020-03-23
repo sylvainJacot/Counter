@@ -5,13 +5,13 @@ import {Route, Switch} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { toggleMenuNav } from './redux/menuNav/menuNav-actions';
 
-import GlobalFonts from "./components/Atoms/globalStyle";
+import GlobalFonts from "./components/01 Atoms/globalStyle";
 
-import {Footer} from "./components/footer/footer";
-import {FrontendHomePage} from "./components/pages/frontendhomepage";
-import {AboutPage} from "./components/pages/aboutepage";
-import DisciplineNav from "./components/disciplinenav/disciplinenav";
-import HeaderNavigation from "./components/headernavigation/headernavigation";
+import {Footer} from "./components/04 Organisms/footer/footer";
+import {FrontendHomePage} from "./components/05 Pages/frontendhomepage";
+import {AboutPage} from "./components/05 Pages/aboutepage";
+import DisciplineNav from "./components/04 Organisms/disciplinenav/disciplinenav";
+import HeaderNavigation from "./components/04 Organisms/headernavigation/headernavigation";
 
 
 function App() {

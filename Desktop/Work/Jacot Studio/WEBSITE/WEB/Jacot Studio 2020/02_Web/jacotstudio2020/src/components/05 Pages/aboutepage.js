@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {colorsRoles} from "../Atoms/colors";
+import {colorsRoles} from "../01 Atoms/colors";
 
 export const AboutPageWrapper = styled.div`
 width: 900px;

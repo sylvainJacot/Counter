@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 import {NavLink} from "react-router-dom";
 
-import {media} from "../Atoms/mediaqueries";
-import {transitions, Breathe, UpDown} from "../Atoms/animations";
-import {colorsRoles, gradient, backgrounds} from "../Atoms/colors";
-import Parrot from "../../media/img/Parrot.png";
+import {media} from "../../01 Atoms/mediaqueries";
+import {transitions, Breathe, UpDown} from "../../01 Atoms/animations";
+import {colorsRoles, gradient, backgrounds} from "../../01 Atoms/colors";
+import Parrot from "../../../media/img/Parrot.png";
+import CTASmall from "../../02 Molecules/ctasmall";
 
 
 export const DisciplineNavItemWrapper = styled.li`
@@ -66,6 +67,8 @@ margin-top:80px;
 width: 100%;
 max-width: unset;
 float: unset;
+display: flex;
+flex-direction: column;
 `}
 
 h1 {
@@ -176,6 +179,9 @@ width: 400px;
 bottom: -32%;
 `}
 }
+    & > a {
+    visibility: hidden;
+    }
 
 ////////////////////:hover effects
 
@@ -200,6 +206,9 @@ bottom: -32%;
     width: 80px;
     transition: ${transitions.basic2}
     }
+    & > a {
+    visibility: visible;
+    }
 
 }
 `;
@@ -223,8 +232,10 @@ export class DisciplineNavItem extends React.Component {
 
                           <h1>{this.props.title}</h1>
                           <p>{this.props.quote}</p>
+                          <CTASmall label={"Test du lien"} />
 
                       </DisciplineNavItemText>
+
 
                       <img alt={altImg} src={Parrot} />
 
