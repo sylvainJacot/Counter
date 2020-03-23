@@ -31,6 +31,7 @@ export const navigationDiscipline =  [
         altImg: "Parrot",
         color: colorsRoles.Brand01,
         bottomGradient: gradient.Brand0130,
+        labelCTA: "Learn more",
     },
     {
         title: WrapTextFront,
@@ -38,6 +39,7 @@ export const navigationDiscipline =  [
         altImg: "Fox",
         color: colorsRoles.Brand02,
         bottomGradient: gradient.Brand0230,
+        labelCTA: "Learn",
     },
     {
         title: WrapTextRetouch,
@@ -45,6 +47,7 @@ export const navigationDiscipline =  [
         altImg: "Unicorne",
         color: colorsRoles.Brand03,
         bottomGradient: gradient.Brand0330,
+        labelCTA: "Learn more",
     },
 
 ]

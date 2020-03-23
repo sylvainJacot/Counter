@@ -51,6 +51,7 @@ const DisciplineNav = () => {
                                     colorBrand={item.color}
                                     bottomGradient={item.bottomGradient}
                                     altImg={item.altImg}
+                                    label={item.labelCTA}
                                 />
                             )
                         }

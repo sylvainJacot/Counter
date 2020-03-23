@@ -104,6 +104,7 @@ left:0;
 `}
 }
 
+
 }
 
 p {
@@ -120,6 +121,12 @@ text-align: left;
 display: none;
 `}
 
+}
+& > a {
+visibility: visible;
+${media.desktop`
+visibility: hidden;
+`}
 }
 
 `;
@@ -179,9 +186,6 @@ width: 400px;
 bottom: -32%;
 `}
 }
-    & > a {
-    visibility: hidden;
-    }
 
 ////////////////////:hover effects
 
@@ -202,14 +206,20 @@ bottom: -32%;
     display: none;
     transition: ${transitions.basic1}
     }
-    ${DisciplineNavItemText} > h1:after {
-    width: 80px;
-    transition: ${transitions.basic2}
-    }
-    & > a {
-    visibility: visible;
-    }
+    ${DisciplineNavItemText} {
+        & > h1:after {
+        width: 80px;
+        transition: ${transitions.basic2}
+        }
+        ${media.desktop`
+        &  a {
+        visibility: visible;
+        color: ${colorsRoles.DarkGrey};
+        padding: 8px 16px 8px 16px;
+      `}
 
+        }
+    }
 }
 `;
 export const BrandBackground = styled.div`
@@ -223,7 +233,7 @@ background-color: ${props => props.colorBrand}16;
 
 export class DisciplineNavItem extends React.Component {
     render() {
-        const {colorBrand,bottomGradient,altImg} = this.props;
+        const {colorBrand,bottomGradient,altImg,label} = this.props;
         return (
               <DisciplineNavItemWrapper bottomGradient={bottomGradient}>
                   <StyledLink to="/Frontend">
@@ -232,7 +242,7 @@ export class DisciplineNavItem extends React.Component {
 
                           <h1>{this.props.title}</h1>
                           <p>{this.props.quote}</p>
-                          <CTASmall label={"Test du lien"} />
+                          <CTASmall label={label} />
 
                       </DisciplineNavItemText>
 
