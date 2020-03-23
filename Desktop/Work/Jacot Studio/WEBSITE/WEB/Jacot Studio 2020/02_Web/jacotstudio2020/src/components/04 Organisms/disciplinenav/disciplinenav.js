@@ -52,6 +52,7 @@ const DisciplineNav = () => {
                                     bottomGradient={item.bottomGradient}
                                     altImg={item.altImg}
                                     label={item.labelCTA}
+                                    src={item.src}
                                 />
                             )
                         }

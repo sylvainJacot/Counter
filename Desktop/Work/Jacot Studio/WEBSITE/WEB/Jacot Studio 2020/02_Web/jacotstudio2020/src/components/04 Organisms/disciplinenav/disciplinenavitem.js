@@ -6,7 +6,6 @@ import {NavLink} from "react-router-dom";
 import {media} from "../../01 Atoms/mediaqueries";
 import {transitions, Breathe, UpDown} from "../../01 Atoms/animations";
 import {colorsRoles, gradient, backgrounds} from "../../01 Atoms/colors";
-import Parrot from "../../../media/img/Parrot.png";
 import CTASmall from "../../02 Molecules/ctasmall";
 
 
@@ -233,7 +232,7 @@ background-color: ${props => props.colorBrand}16;
 
 export class DisciplineNavItem extends React.Component {
     render() {
-        const {colorBrand,bottomGradient,altImg,label} = this.props;
+        const {colorBrand,bottomGradient,altImg,label,src} = this.props;
         return (
               <DisciplineNavItemWrapper bottomGradient={bottomGradient}>
                   <StyledLink to="/Frontend">
@@ -247,7 +246,7 @@ export class DisciplineNavItem extends React.Component {
                       </DisciplineNavItemText>
 
 
-                      <img alt={altImg} src={Parrot} />
+                      <img alt={altImg} src={src} />
 
                       <ImgShadow/>
                       <BrandBackground colorBrand={colorBrand}/>
