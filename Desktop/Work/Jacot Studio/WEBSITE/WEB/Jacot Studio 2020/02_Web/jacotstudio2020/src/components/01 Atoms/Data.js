@@ -34,6 +34,7 @@ export const navigationDiscipline =  [
         bottomGradient: gradient.Brand0130,
         labelCTA: "Learn more",
         src: images.Parrot,
+
     },
     {
         title: WrapTextFront,

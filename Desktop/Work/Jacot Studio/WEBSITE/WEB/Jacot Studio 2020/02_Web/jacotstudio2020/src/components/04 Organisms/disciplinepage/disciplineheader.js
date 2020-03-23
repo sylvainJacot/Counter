@@ -31,7 +31,6 @@ ${media.desktop`
 padding: unset;
 align-items: unset;
 padding-top: 80px;
-margin-right: 80px;
 flex-wrap: wrap;
 align-items: unset;
 flex-direction: column;

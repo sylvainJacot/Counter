@@ -1,7 +1,6 @@
 import React from "react";
 import {colorsRoles} from "./colors";
 import styled from "styled-components";
-import {Link} from "react-router-dom";
 import {transitions} from "./animations";
 import {media} from "./mediaqueries";
 
