@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 import {NavLink} from "react-router-dom";
 
-import {media} from "../Atoms/mediaqueries";
-import {transitions, Breathe, UpDown} from "../Atoms/animations";
-import {colorsRoles, gradient, backgrounds} from "../Atoms/colors";
-import Parrot from "../../media/img/Parrot.png";
+import {media} from "../../01 Atoms/mediaqueries";
+import {transitions, Breathe, UpDown} from "../../01 Atoms/animations";
+import {colorsRoles, gradient, backgrounds} from "../../01 Atoms/colors";
+import Parrot from "../../../media/img/Parrot.png";
+import CTASmall from "../../02 Molecules/ctasmall";
 
 
 export const DisciplineNavItemWrapper = styled.li`
@@ -50,26 +51,24 @@ ${props => props.bottomGradient}
 `;
 export const DisciplineNavItemText = styled.div`
 float: right;
-width: 48%;
 height: 138px;
 margin-top: 32px;
-margin-right: 16px;
 text-align: right;
+max-width: 64%;
 color: ${colorsRoles.White};
 transition: ${transitions.basic2};
 
 ${media.mobileL `
 margin-top: 40px;
-margin-right: 24px;
 `}
-${media.tablet`
-margin-right: 32px;
-`}
+
 ${media.desktop`
-margin-top:126px;
-margin-left: 40px;
+margin-top:80px;
 width: 100%;
+max-width: unset;
 float: unset;
+display: flex;
+flex-direction: column;
 `}
 
 h1 {
@@ -95,6 +94,7 @@ right: 0;
 width: 40px;
 height: 2px;
 background-color: ${props => props.colorBrand};
+transition: ${transitions.basic2}
 ${media.tablet`
 bottom: -16px;
 `}
@@ -103,6 +103,7 @@ right:unset;
 left:0;
 `}
 }
+
 
 }
 
@@ -118,19 +119,50 @@ font-size: 3rem;
 ${media.desktop`
 text-align: left;
 display: none;
-margin-left: 40px;
 `}
 
 }
+& > a {
+visibility: visible;
+${media.desktop`
+visibility: hidden;
+`}
+}
 
+`;
+export const ImgShadow = styled.div`
+position: absolute;
+display: none;
+width: 80%;
+height: 40px;
+bottom: 4%;
+right: 50%;
+z-index: 1;
+transform: translate(50%,0);
+transition: ${transitions.basic1}
+${backgrounds.RadialBg02};
+${media.desktop`
+display: block;
+animation: ${Breathe} 5s linear infinite;
+`}
+${media.desktopL`
+bottom: 2%;
+transition: ${transitions.basic1}
+`}
 `;
 export const StyledLink = styled(NavLink)` 
 display: block;
-width: 100%;
-height: 100%;
+width: auto;
+padding: 0 16px;
+${media.mobileL`
+padding: 0 32px;
+`}
+${media.tablet`
+padding: 0 40px;
+`}
 img {
 position: absolute;
-z-index: 1;
+z-index: 2;
 width: 328px;
 height: auto;
 left: -80px;
@@ -142,16 +174,16 @@ width: 400px;
 top: 0;
 `}
 ${media.desktop`
-width: 300px;
+width: 360px;
 left:50%;
 top: unset;
-bottom: -80px;
-transform: translate(-50%,-50%);
+bottom: -24%;
+transform: translate(-50%,50%);
 animation: ${UpDown} 5s linear infinite;
 `}
 ${media.desktopL`
 width: 400px;
-bottom: -182px;
+bottom: -32%;
 `}
 }
 
@@ -163,31 +195,32 @@ bottom: -182px;
    img {
       transition: ${transitions.basic2}
       ${media.desktop`
-        width: 520px;
-        bottom: -520px;
+        width: 560px;
+        bottom: -80%;
       `}
     }
     ${DisciplineNavItemText} > p {
     display: block;
     }
+    ${ImgShadow} {
+    display: none;
+    transition: ${transitions.basic1}
+    }
+    ${DisciplineNavItemText} {
+        & > h1:after {
+        width: 80px;
+        transition: ${transitions.basic2}
+        }
+        ${media.desktop`
+        &  a {
+        visibility: visible;
+        color: ${colorsRoles.DarkGrey};
+        padding: 8px 16px 8px 16px;
+      `}
 
+        }
+    }
 }
-`;
-export const ImgShadow = styled.div`
-position: absolute;
-display: none;
-width: 80%;
-height: 40px;
-bottom: 80px;
-right: 50%;
-z-index: 10;
-transform: translate(50%,0);
-transition: ${transitions.basic1}
-${backgrounds.RadialBg02};
-${media.desktop`
-display: block;
-animation: ${Breathe} 5s linear infinite;
-`}
 `;
 export const BrandBackground = styled.div`
 position: absolute;
@@ -200,7 +233,7 @@ background-color: ${props => props.colorBrand}16;
 
 export class DisciplineNavItem extends React.Component {
     render() {
-        const {colorBrand,bottomGradient,altImg} = this.props;
+        const {colorBrand,bottomGradient,altImg,label} = this.props;
         return (
               <DisciplineNavItemWrapper bottomGradient={bottomGradient}>
                   <StyledLink to="/Frontend">
@@ -209,8 +242,10 @@ export class DisciplineNavItem extends React.Component {
 
                           <h1>{this.props.title}</h1>
                           <p>{this.props.quote}</p>
+                          <CTASmall label={label} />
 
                       </DisciplineNavItemText>
+
 
                       <img alt={altImg} src={Parrot} />
 

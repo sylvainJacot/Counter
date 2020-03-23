@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import {media} from "../Atoms/mediaqueries";
-import {transitions} from "../Atoms/animations";
+import {media} from "../../01 Atoms/mediaqueries";
+import {transitions} from "../../01 Atoms/animations";
 import {DisciplineNavItem} from "./disciplinenavitem";
-import {navigationDiscipline} from "../Atoms/Data";
-import Square from "../../square";
+import {navigationDiscipline} from "../../01 Atoms/Data";
 
 import {connect} from "react-redux";
 
@@ -38,12 +37,9 @@ transition: ${transitions.basic2};
 
 `;
 
-const DisciplineNav = (currentStateMenuNav) => {
+const DisciplineNav = () => {
         return <>
                 <DisciplineNavWrapper>
-
-                    { currentStateMenuNav && <Square/> }
-
                     <DisciplineNavList>
 
                         {
@@ -55,6 +51,7 @@ const DisciplineNav = (currentStateMenuNav) => {
                                     colorBrand={item.color}
                                     bottomGradient={item.bottomGradient}
                                     altImg={item.altImg}
+                                    label={item.labelCTA}
                                 />
                             )
                         }
