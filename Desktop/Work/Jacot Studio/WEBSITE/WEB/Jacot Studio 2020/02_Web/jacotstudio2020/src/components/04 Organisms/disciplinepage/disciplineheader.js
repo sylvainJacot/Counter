@@ -4,6 +4,7 @@ import {images} from "../../01 Atoms/images";
 import {media} from "../../01 Atoms/mediaqueries";
 import {colorsRoles, backgrounds, gradient} from "../../01 Atoms/colors";
 import {transitions} from "../../01 Atoms/animations";
+import {LogoSamsung} from "../../01 Atoms/icons";
 
 export const HeaderWrapper = styled.section`
 position: relative;
@@ -31,12 +32,16 @@ ${media.desktop`
 padding: unset;
 align-items: unset;
 padding-top: 80px;
-margin-right: 80px;
 flex-direction: unset;
 justify-content: center;
 `}
 
 `
+export const HeaderMain = styled.main`
+display: flex;
+flex-direction: column;
+align-items: center;
+`;
 export const Picture = styled.img`
 width: 200%;
 position: absolute;
@@ -128,20 +133,39 @@ margin-top: 42px;
 }
 `;
 
+export const LogosWrapper = styled.div`
+display: grid;
+grid-auto-flow: row;
+grid-template-columns: repeat(2, 1fr);
+align-items: center;
+grid-column-gap: 80px;
+${media.tablet`
+grid-template-columns: repeat(4, 1fr);
+`}
+
+`;
 
 
 const DisciplineHeader = () => {
     return <>
-        <HeaderWrapper>
-            <DisciplinePictureWrapper>
-                <Picture src={images.Parrot} />
-            </DisciplinePictureWrapper>
-            <TextContent>
-                <h1>UI Designer</h1>
-                <p>Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have.
-                </p>
-            </TextContent>
-        </HeaderWrapper>
+            <HeaderWrapper>
+                <HeaderMain>
+                    <DisciplinePictureWrapper>
+                        <Picture src={images.Parrot} />
+                    </DisciplinePictureWrapper>
+                    <TextContent>
+                        <h1>UI Designer</h1>
+                        <p>Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have.
+                        </p>
+                    </TextContent>
+                </HeaderMain>
+                <LogosWrapper>
+                    <LogoSamsung Size={"80px"} FillColor={colorsRoles.LightGrey}/>
+                    <LogoSamsung Size={"80px"} FillColor={colorsRoles.LightGrey}/>
+                    <LogoSamsung Size={"80px"} FillColor={colorsRoles.LightGrey}/>
+                    <LogoSamsung Size={"80px"} FillColor={colorsRoles.LightGrey}/>
+                </LogosWrapper>
+            </HeaderWrapper>
     </>
 
 };
