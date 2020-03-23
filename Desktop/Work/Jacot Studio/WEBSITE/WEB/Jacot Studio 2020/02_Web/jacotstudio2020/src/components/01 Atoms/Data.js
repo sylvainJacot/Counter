@@ -56,3 +56,22 @@ export const navigationDiscipline =  [
     },
 
 ]
+
+export const methodo = [
+    {
+        title: "Favourite Methodology",
+        discipline: "UX/UI Designer",
+        tools: [
+            {name: "Sketch", SourceImage: images.Sketch},
+            {name: "Sass", SourceImage: images.Sass},
+        ]
+    },
+    {
+        title: "Favourite Methodology",
+        discipline: "UX/UI Designer",
+        tools: [
+            {name: "Sketch", SourceImage: images.Sass},
+            {name: "Sass", SourceImage: images.Sketch},
+        ]
+    }
+]
