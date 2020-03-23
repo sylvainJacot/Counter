@@ -7,7 +7,7 @@ import {methodo} from "../../01 Atoms/Data";
 import {images} from "../../01 Atoms/images";
 import MethodoImage from "../../02 Molecules/methodoImage";
 
-export const FavouriteMethodoWrapper = styled.section`
+export const TemplateMethodoWrapper = styled.section`
 background-color: ${colorsRoles.White};
 display: flex;
 flex-direction: column;
@@ -26,21 +26,27 @@ align-items: unset;
 `}
 `;
 
+export const MethodoImagesWrapper = styled.div`
+display: flex;
+`;
 
-const FavouriteMethodo = (props) => {
+
+const TemplateMethodo = (props) => {
     return <>
-        <FavouriteMethodoWrapper>
-            <h1>Favourite Methodo</h1>
+        <TemplateMethodoWrapper>
+            <h1>{props.Title}</h1>
+                <MethodoImagesWrapper>
                     {
-                        methodo[0].tools.map((item) =>
+                        methodo[props.ArrayItem].tools.map((item) =>
                         <MethodoImage
                             sourceMobile={item.SourceImage}
                         />
                         )
                     }
-        </FavouriteMethodoWrapper>
+                </MethodoImagesWrapper>
+        </TemplateMethodoWrapper>
     </>
 
 };
 
-export default FavouriteMethodo;
+export default TemplateMethodo;

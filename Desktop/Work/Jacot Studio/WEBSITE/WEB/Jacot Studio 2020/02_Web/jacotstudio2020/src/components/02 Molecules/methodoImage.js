@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import {gradient} from "../01 Atoms/colors";
 import {transitions} from "../01 Atoms/animations";
-import {images} from "../01 Atoms/images";
 import {ResponsiveImage} from "../01 Atoms/ResponsiveImage";
 
 
@@ -36,6 +35,7 @@ width: 100%;
 height: 100%;
 } 
 `;
+
 
 
 

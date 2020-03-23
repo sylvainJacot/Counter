@@ -4,7 +4,7 @@ import DisciplineHeader from "../04 Organisms/disciplinepage/disciplineheader";
 import {colorsRoles} from "../01 Atoms/colors";
 import {images} from "../01 Atoms/images";
 import {media} from "../01 Atoms/mediaqueries";
-import FavouriteMethodo from "../04 Organisms/disciplinepage/favouritemethodo";
+import TemplateMethodo from "../04 Organisms/disciplinepage/memplatemethodo";
 
 export const Box = styled.div`
 ${media.desktop`
@@ -25,7 +25,10 @@ export class FrontendHomePage extends React.Component {
                         Picture={images.Parrot}
                         Texte={"Forget Ebay and other forms of advertising for your property that costs you hard earned money. Why not do it all for free? Investment Assets Properties have ready several locations around the world to take your free listings for any luxury property you have."}
                     />
-                    <FavouriteMethodo/>
+                    <TemplateMethodo
+                        Title={"Test du Title"}
+                        ArrayItem={0}
+                    />
                 </Box>
                 </>
         )
