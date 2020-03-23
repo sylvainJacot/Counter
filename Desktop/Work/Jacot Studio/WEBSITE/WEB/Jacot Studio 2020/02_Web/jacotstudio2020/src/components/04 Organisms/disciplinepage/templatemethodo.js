@@ -12,6 +12,7 @@ background-color: ${colorsRoles.White};
 display: flex;
 flex-direction: column;
 align-items: center;
+padding: 80px 0;
  h1 {
 position: relative;
 font-family: PlayfairDisplay-Regular_Black;
