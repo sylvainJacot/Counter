@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import DisciplineHeader from "../04 Organisms/disciplinepage/disciplineheader";
+import Skillheader from "../04 Organisms/skillpage/skillheader";
 import {colorsRoles} from "../01 Atoms/colors";
 import {media} from "../01 Atoms/mediaqueries";
 import Skills from "../01 Atoms/Data";
@@ -19,7 +19,7 @@ const SkillProjects  = ({}) => {
             <>
 
                         <Box>
-                            <DisciplineHeader
+                            <Skillheader
                                 mainTitle={"Titre 01"}
                                 mainColor={colorsRoles.Brand01}
                                 srcMainImg={images.Parrot}

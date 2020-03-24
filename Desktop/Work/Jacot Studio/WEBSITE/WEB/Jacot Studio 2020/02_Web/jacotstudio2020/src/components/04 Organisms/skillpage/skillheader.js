@@ -161,7 +161,7 @@ justify-content: center;
 `;
 
 
-const DisciplineHeader = (props) => {
+const Skillheader = (props) => {
     return <>
             <HeaderWrapper>
                 <HeaderMain>
@@ -184,4 +184,4 @@ const DisciplineHeader = (props) => {
 
 };
 
-export default DisciplineHeader;
+export default Skillheader;
