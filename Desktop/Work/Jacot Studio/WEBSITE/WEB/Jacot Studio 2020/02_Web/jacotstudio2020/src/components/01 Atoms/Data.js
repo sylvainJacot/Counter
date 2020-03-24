@@ -136,7 +136,8 @@ const Skills =  [
         pathName:"/creative-developer",
         skillProjects: [
             {
-                mainTitle: "UX/UI Designer",
+                mainTitle: "Creative Developer",
+                mainColor: colorsRoles.Brand02,
                 description: "Forget Ebay and other forms of ... description",
                 favouriteMethodo: [
                     {
@@ -233,7 +234,8 @@ const Skills =  [
         pathName:"/photo-retoucher",
         skillProjects: [
             {
-                mainTitle: "UX/UI Designer",
+                mainTitle: "Photo Retoucher",
+                mainColor: colorsRoles.Brand03,
                 description: "Forget Ebay and other forms of ... description",
                 favouriteMethodo: [
                     {
