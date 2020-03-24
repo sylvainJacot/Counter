@@ -3,14 +3,14 @@ import styled from "styled-components";
 import {Switch,Route,useRouteMatch} from "react-router-dom";
 import {media} from "../../01 Atoms/mediaqueries";
 import {transitions} from "../../01 Atoms/animations";
-import {Skillsnavitem} from "./skillsnavitem";
+import Skillsnavitem from "./skillsnavitem";
 import Skills from "../../01 Atoms/Data";
 import colorsRoles from "../../01 Atoms/colors";
 import {connect} from "react-redux";
 import SkillProjects from "../../05 Pages/skillprojects";
 import Square from "../../../square";
 
-export const DisciplineNavWrapper = styled.nav`
+export const SkillsNavWrapper = styled.nav`
 margin-top: 64px;
 ${media.desktop`
 margin-top: unset;
@@ -18,7 +18,7 @@ margin-right: 80px;
 `}
 `;
 
-export const DisciplineNavList = styled.ul`
+export const SkillsNavList = styled.ul`
 }
 ${media.desktop`
 display: flex;
@@ -41,9 +41,10 @@ transition: ${transitions.basic2};
 `;
 
 const SkillsNav = () => {
+    // let { path } = useRouteMatch();
         return <>
-                <DisciplineNavWrapper>
-                    <DisciplineNavList>
+                <SkillsNavWrapper>
+                    <SkillsNavList>
 
                         {
                             Skills.map((skillItem, index) =>
@@ -63,22 +64,10 @@ const SkillsNav = () => {
                             )
                         }
 
-                    </DisciplineNavList>
+                    </SkillsNavList>
 
-                </DisciplineNavWrapper>
+                </SkillsNavWrapper>
 
-            <Square
-                bgColor={"red"}
-                nomcarre={"UI/UX"}
-            />
-            <Square
-                bgColor={"blue"}
-                nomcarre={"Frontend"}
-            />
-            <Square
-                bgColor={"purple"}
-                nomcarre={"PhotoRetouch"}
-            />
             </>
 
 
@@ -93,3 +82,28 @@ const MapStateToProps = ({menuNav : {currentStateMenuNav}}) => ({
 });
 
 export default connect(MapStateToProps)(SkillsNav);
+
+
+
+/*<Switch>
+    <Route path={"/uiux-designer"}>
+        <Square
+            bgColor={"red"}
+            nomcarre={"UI/UX"}
+        />
+    </Route>
+
+    <Route path={"/uiux-designer"}>
+        <Square
+            bgColor={"blue"}
+            nomcarre={"Frontend"}
+        />
+    </Route>
+
+    <Route path={"/uiux-designer"}>
+        <Square
+            bgColor={"purple"}
+            nomcarre={"PhotoRetouch"}
+        />
+    </Route>
+</Switch>*/

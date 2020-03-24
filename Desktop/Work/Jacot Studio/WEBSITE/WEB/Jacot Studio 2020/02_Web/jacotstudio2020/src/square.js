@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {useParams} from "react-router-dom";
 
 export const SquareBox = styled.div`
 width: 300px;
@@ -15,9 +16,10 @@ background-color: ${props => props.bgColor};
 `;
 
 const Square = (props) => {
+    let skillID = useParams();
     return (
         <>
-            <SquareBox bgColor={props.bgColor}>{props.nomcarre}</SquareBox>
+            <SquareBox bgColor={props.bgColor}>{skillID}</SquareBox>
         </>
     );
 }
