@@ -33,11 +33,11 @@ display: flex;
 const TemplateMethodo = (props) => {
     return <>
         <TemplateMethodoWrapper>
-            <h1>{props.Title}</h1>
+            <h1>Favourite Methodology</h1>
                 <MethodoImagesWrapper>
 
                         <MethodoImage
-                            sourceMobile={images.Sketch}
+                            sourceMobile={props.methodImage}
                         />
 
                 </MethodoImagesWrapper>

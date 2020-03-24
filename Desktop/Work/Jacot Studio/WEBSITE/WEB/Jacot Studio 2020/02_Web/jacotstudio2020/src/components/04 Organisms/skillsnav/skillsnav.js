@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import {Switch,Route,useRouteMatch} from "react-router-dom";
 import {media} from "../../01 Atoms/mediaqueries";
 import {transitions} from "../../01 Atoms/animations";
-import {DisciplineNavItem} from "./disciplinenavitem";
+import {Skillsnavitem} from "./skillsnavitem";
 import Skills from "../../01 Atoms/Data";
-
+import colorsRoles from "../../01 Atoms/colors";
 import {connect} from "react-redux";
+import SkillProjects from "../../05 Pages/skillprojects";
+import Square from "../../../square";
 
 export const DisciplineNavWrapper = styled.nav`
 margin-top: 64px;
@@ -37,14 +40,15 @@ transition: ${transitions.basic2};
 
 `;
 
-const DisciplineNav = () => {
+const SkillsNav = () => {
         return <>
                 <DisciplineNavWrapper>
                     <DisciplineNavList>
 
                         {
                             Skills.map((skillItem, index) =>
-                                <DisciplineNavItem
+
+                                <Skillsnavitem
                                     key={index}
                                     title={skillItem.titleNav}
                                     quote={skillItem.quote}
@@ -55,6 +59,7 @@ const DisciplineNav = () => {
                                     src={skillItem.srcMainImg}
                                     pathName={skillItem.pathName}
                                 />
+
                             )
                         }
 
@@ -62,7 +67,20 @@ const DisciplineNav = () => {
 
                 </DisciplineNavWrapper>
 
+            <Square
+                bgColor={"red"}
+                nomcarre={"UI/UX"}
+            />
+            <Square
+                bgColor={"blue"}
+                nomcarre={"Frontend"}
+            />
+            <Square
+                bgColor={"purple"}
+                nomcarre={"PhotoRetouch"}
+            />
             </>
+
 
 };
 
@@ -74,4 +92,4 @@ const MapStateToProps = ({menuNav : {currentStateMenuNav}}) => ({
     currentStateMenuNav
 });
 
-export default connect(MapStateToProps)(DisciplineNav);
+export default connect(MapStateToProps)(SkillsNav);

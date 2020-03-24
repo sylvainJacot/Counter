@@ -43,11 +43,11 @@ const Skills =  [
                 description: "Forget Ebay and other forms of ... description",
                 favouriteMethodo: [
                     {
-                        methodoTitle: "Sketch",
+                        methodTitle: "Sketch",
                         methodImage: images.Sketch,
                     },
                     {
-                        methodoTitle: "Sass",
+                        methodTitle: "Sass",
                         methodImage: images.Sass,
                     }
                 ],
@@ -66,11 +66,11 @@ const Skills =  [
                                 team: "Alphonse, Robert",
                                 favouriteMethodo: [
                                     {
-                                        methodoTitle: "Sketch",
+                                        methodTitle: "Sketch",
                                         methodImage: images.Sketch,
                                     },
                                     {
-                                        methodoTitle: "Sass",
+                                        methodTitle: "Sass",
                                         methodImage: images.Sass,
                                     }
                                 ],
@@ -100,11 +100,11 @@ const Skills =  [
                                 team: "Alphonse, Robert",
                                 favouriteMethodo: [
                                     {
-                                        methodoTitle: "Sketch",
+                                        methodTitle: "Sketch",
                                         methodImage: images.Sketch,
                                     },
                                     {
-                                        methodoTitle: "Sass",
+                                        methodTitle: "Sass",
                                         methodImage: images.Sass,
                                     }
                                 ],
@@ -141,11 +141,11 @@ const Skills =  [
                 description: "Forget Ebay and other forms of ... description",
                 favouriteMethodo: [
                     {
-                        methodoTitle: "Sketch",
+                        methodTitle: "Sketch",
                         methodImage: images.Sketch,
                     },
                     {
-                        methodoTitle: "Sass",
+                        methodTitle: "Sass",
                         methodImage: images.Sass,
                     }
                 ],
@@ -164,11 +164,11 @@ const Skills =  [
                                 team: "Alphonse, Robert",
                                 favouriteMethodo: [
                                     {
-                                        methodoTitle: "Sketch",
+                                        methodTitle: "Sketch",
                                         methodImage: images.Sketch,
                                     },
                                     {
-                                        methodoTitle: "Sass",
+                                        methodTitle: "Sass",
                                         methodImage: images.Sass,
                                     }
                                 ],
@@ -198,11 +198,11 @@ const Skills =  [
                                 team: "Alphonse, Robert",
                                 favouriteMethodo: [
                                     {
-                                        methodoTitle: "Sketch",
+                                        methodTitle: "Sketch",
                                         methodImage: images.Sketch,
                                     },
                                     {
-                                        methodoTitle: "Sass",
+                                        methodTitle: "Sass",
                                         methodImage: images.Sass,
                                     }
                                 ],
@@ -239,11 +239,11 @@ const Skills =  [
                 description: "Forget Ebay and other forms of ... description",
                 favouriteMethodo: [
                     {
-                        methodoTitle: "Sketch",
+                        methodTitle: "Sketch",
                         methodImage: images.Sketch,
                     },
                     {
-                        methodoTitle: "Sass",
+                        methodTitle: "Sass",
                         methodImage: images.Sass,
                     }
                 ],
@@ -262,11 +262,11 @@ const Skills =  [
                                 team: "Alphonse, Robert",
                                 favouriteMethodo: [
                                     {
-                                        methodoTitle: "Sketch",
+                                        methodTitle: "Sketch",
                                         methodImage: images.Sketch,
                                     },
                                     {
-                                        methodoTitle: "Sass",
+                                        methodTitle: "Sass",
                                         methodImage: images.Sass,
                                     }
                                 ],
@@ -296,11 +296,11 @@ const Skills =  [
                                 team: "Alphonse, Robert",
                                 favouriteMethodo: [
                                     {
-                                        methodoTitle: "Sketch",
+                                        methodTitle: "Sketch",
                                         methodImage: images.Sketch,
                                     },
                                     {
-                                        methodoTitle: "Sass",
+                                        methodTitle: "Sass",
                                         methodImage: images.Sass,
                                     }
                                 ],

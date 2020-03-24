@@ -230,7 +230,7 @@ bottom: 0;
 background-color: ${props => props.colorBrand}16;
 `;
 
-export class DisciplineNavItem extends React.Component {
+export class Skillsnavitem extends React.Component {
     render() {
         const {colorBrand,bottomGradient,altImg,label,src,pathName} = this.props;
         return (

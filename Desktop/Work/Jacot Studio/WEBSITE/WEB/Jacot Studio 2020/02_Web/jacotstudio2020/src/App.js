@@ -8,9 +8,8 @@ import { toggleMenuNav } from './redux/menuNav/menuNav-actions';
 import GlobalFonts from "./components/01 Atoms/globalStyle";
 
 import {Footer} from "./components/04 Organisms/footer/footer";
-import {DisciplineHomePage} from "./components/05 Pages/disciplineHomePage";
 import {AboutPage} from "./components/05 Pages/aboutepage";
-import DisciplineNav from "./components/04 Organisms/disciplinenav/disciplinenav";
+import DisciplineNav from "./components/04 Organisms/skillsnav/skillsnav";
 import HeaderNavigation from "./components/04 Organisms/headernavigation/headernavigation";
 
 
@@ -21,9 +20,6 @@ function App() {
               <HeaderNavigation/>
               <Switch>
                   <Route exact path="/" component={DisciplineNav}/>
-                  <Route path="/uiux-designer" component={DisciplineHomePage}/>
-                  <Route path="/creative-developer" component={DisciplineHomePage}/>
-                  <Route path="/photo-retoucher" component={DisciplineHomePage}/>
                   <Route path="/About" component={AboutPage}/>
               </Switch>
               <Footer/>

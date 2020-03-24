@@ -2,15 +2,22 @@ import React from 'react';
 import styled from "styled-components";
 
 export const SquareBox = styled.div`
-width: 400px;
-height: 400px;
-background-color: tomato;
+width: 300px;
+height: 300px;
+display: block;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 5em;
+border: 1px solid tomato;
+background-color: ${props => props.bgColor};
 `;
 
-function Square() {
+const Square = (props) => {
     return (
         <>
-            <SquareBox></SquareBox>
+            <SquareBox bgColor={props.bgColor}>{props.nomcarre}</SquareBox>
         </>
     );
 }
