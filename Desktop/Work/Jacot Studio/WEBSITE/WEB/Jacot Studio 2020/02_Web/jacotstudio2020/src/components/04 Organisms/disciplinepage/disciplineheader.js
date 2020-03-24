@@ -165,12 +165,12 @@ const DisciplineHeader = (props) => {
     return <>
             <HeaderWrapper>
                 <HeaderMain>
-                    <DisciplinePictureWrapper MainColor={props.MainColor}>
-                        <Picture src={props.Picture} />
+                    <DisciplinePictureWrapper MainColor={props.mainColor}>
+                        <Picture src={props.srcMainImg} />
                     </DisciplinePictureWrapper>
                     <TextContent>
-                        <h1>{props.Title}</h1>
-                        <p>{props.Texte}</p>
+                        <h1>{props.mainTitle}</h1>
+                        <p>{props.description}</p>
                     </TextContent>
                 </HeaderMain>
                 <LogosWrapper>

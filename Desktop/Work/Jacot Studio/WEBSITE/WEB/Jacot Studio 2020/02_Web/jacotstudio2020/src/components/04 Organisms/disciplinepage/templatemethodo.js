@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import {media} from "../../01 Atoms/mediaqueries";
 import {colorsRoles, backgrounds, gradient} from "../../01 Atoms/colors";
-import {transitions} from "../../01 Atoms/animations";
-import {methodo} from "../../01 Atoms/Data";
 import {images} from "../../01 Atoms/images";
 import MethodoImage from "../../02 Molecules/methodoImage";
 
@@ -37,13 +35,11 @@ const TemplateMethodo = (props) => {
         <TemplateMethodoWrapper>
             <h1>{props.Title}</h1>
                 <MethodoImagesWrapper>
-                    {
-                        methodo[props.ArrayItem].tools.map((item) =>
+
                         <MethodoImage
-                            sourceMobile={item.SourceImage}
+                            sourceMobile={images.Sketch}
                         />
-                        )
-                    }
+
                 </MethodoImagesWrapper>
         </TemplateMethodoWrapper>
     </>

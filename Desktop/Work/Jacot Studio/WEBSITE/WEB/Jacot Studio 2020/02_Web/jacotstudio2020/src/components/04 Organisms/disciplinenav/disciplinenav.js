@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {media} from "../../01 Atoms/mediaqueries";
 import {transitions} from "../../01 Atoms/animations";
 import {DisciplineNavItem} from "./disciplinenavitem";
-import {navigationDiscipline} from "../../01 Atoms/Data";
+import Discipline from "../../01 Atoms/Data";
 
 import {connect} from "react-redux";
 
@@ -43,16 +43,17 @@ const DisciplineNav = () => {
                     <DisciplineNavList>
 
                         {
-                            navigationDiscipline.map((item, index) =>
+                            Discipline.map((item, index) =>
                                 <DisciplineNavItem
                                     key={index}
-                                    title={item.title}
+                                    title={item.titleNav}
                                     quote={item.quote}
-                                    colorBrand={item.color}
-                                    bottomGradient={item.bottomGradient}
-                                    altImg={item.altImg}
+                                    colorBrand={item.mainColor}
+                                    bottomGradient={item.mainGradient}
+                                    altImg={item.altMainImg}
                                     label={item.labelCTA}
-                                    src={item.src}
+                                    src={item.srcMainImg}
+                                    pathName={item.pathName}
                                 />
                             )
                         }

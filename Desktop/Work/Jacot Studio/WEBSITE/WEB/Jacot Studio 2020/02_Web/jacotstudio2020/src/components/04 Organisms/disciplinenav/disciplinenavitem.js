@@ -232,10 +232,10 @@ background-color: ${props => props.colorBrand}16;
 
 export class DisciplineNavItem extends React.Component {
     render() {
-        const {colorBrand,bottomGradient,altImg,label,src} = this.props;
+        const {colorBrand,bottomGradient,altImg,label,src,pathName} = this.props;
         return (
               <DisciplineNavItemWrapper bottomGradient={bottomGradient}>
-                  <StyledLink to="/Frontend">
+                  <StyledLink to={pathName}>
 
                       <DisciplineNavItemText colorBrand={colorBrand}>
 
