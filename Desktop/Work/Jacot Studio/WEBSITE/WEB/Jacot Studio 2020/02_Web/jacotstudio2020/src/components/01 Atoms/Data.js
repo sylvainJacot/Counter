@@ -25,7 +25,7 @@ const WrapTextRetouch = (
     </>
 );
 
-const Disciplines =  [
+const Skills =  [
     {
         titleNav: WrapTextDesign,
         quote: "Lorem ipsum UX/UI Designer ezifz iugef zieg fzieg",
@@ -35,7 +35,7 @@ const Disciplines =  [
         mainGradient: gradient.Brand0130,
         labelCTA: "Learn more",
         pathName:"/uiux-designer",
-        projectsPage: [
+        skillProjects: [
             {
                 mainTitle: "UX/UI Designer",
                 srcMainImg: images.Parrot,
@@ -51,7 +51,7 @@ const Disciplines =  [
                         methodImage: images.Sass,
                     }
                 ],
-                projects: [
+                projectitem: [
                     {
                         title: "Evergreen",
                         description: "Evergreen is a great project",
@@ -134,7 +134,7 @@ const Disciplines =  [
         mainGradient: gradient.Brand0130,
         labelCTA: "Learn more",
         pathName:"/creative-developer",
-        projectsPage: [
+        skillProjects: [
             {
                 mainTitle: "UX/UI Designer",
                 description: "Forget Ebay and other forms of ... description",
@@ -148,7 +148,7 @@ const Disciplines =  [
                         methodImage: images.Sass,
                     }
                 ],
-                projects: [
+                projectitem: [
                     {
                         title: "Evergreen",
                         description: "Evergreen is a great project",
@@ -231,7 +231,7 @@ const Disciplines =  [
         mainGradient: gradient.Brand0130,
         labelCTA: "Learn more",
         pathName:"/photo-retoucher",
-        projectsPage: [
+        skillProjects: [
             {
                 mainTitle: "UX/UI Designer",
                 description: "Forget Ebay and other forms of ... description",
@@ -245,7 +245,7 @@ const Disciplines =  [
                         methodImage: images.Sass,
                     }
                 ],
-                projects: [
+                projectitem: [
                     {
                         title: "Evergreen",
                         description: "Evergreen is a great project",
@@ -323,4 +323,4 @@ const Disciplines =  [
 
 ]
 
-export default Disciplines;
+export default Skills;
