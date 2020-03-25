@@ -44,11 +44,11 @@ const Skills =  [
                 favouriteMethodo: [
                     {
                         methodTitle: "Sketch",
-                        methodImage: images.Sketch,
+                        methodLogo: images.Sketch,
                     },
                     {
                         methodTitle: "Sass",
-                        methodImage: images.Sass,
+                        methodLogo: images.Sass,
                     }
                 ],
                 projectitem: [
@@ -67,11 +67,11 @@ const Skills =  [
                                 favouriteMethodo: [
                                     {
                                         methodTitle: "Sketch",
-                                        methodImage: images.Sketch,
+                                        methodLogo: images.Sketch,
                                     },
                                     {
                                         methodTitle: "Sass",
-                                        methodImage: images.Sass,
+                                        methodLogo: images.Sass,
                                     }
                                 ],
                                 images: [
@@ -101,11 +101,11 @@ const Skills =  [
                                 favouriteMethodo: [
                                     {
                                         methodTitle: "Sketch",
-                                        methodImage: images.Sketch,
+                                        methodLogo: images.Sketch,
                                     },
                                     {
                                         methodTitle: "Sass",
-                                        methodImage: images.Sass,
+                                        methodLogo: images.Sass,
                                     }
                                 ],
                                 images: [
@@ -142,11 +142,11 @@ const Skills =  [
                 favouriteMethodo: [
                     {
                         methodTitle: "Sketch",
-                        methodImage: images.Sketch,
+                        methodLogo: images.Sketch,
                     },
                     {
                         methodTitle: "Sass",
-                        methodImage: images.Sass,
+                        methodLogo: images.Sass,
                     }
                 ],
                 projectitem: [
@@ -165,11 +165,11 @@ const Skills =  [
                                 favouriteMethodo: [
                                     {
                                         methodTitle: "Sketch",
-                                        methodImage: images.Sketch,
+                                        methodLogo: images.Sketch,
                                     },
                                     {
                                         methodTitle: "Sass",
-                                        methodImage: images.Sass,
+                                        methodLogo: images.Sass,
                                     }
                                 ],
                                 images: [
@@ -199,11 +199,11 @@ const Skills =  [
                                 favouriteMethodo: [
                                     {
                                         methodTitle: "Sketch",
-                                        methodImage: images.Sketch,
+                                        methodLogo: images.Sketch,
                                     },
                                     {
                                         methodTitle: "Sass",
-                                        methodImage: images.Sass,
+                                        methodLogo: images.Sass,
                                     }
                                 ],
                                 images: [
@@ -240,11 +240,11 @@ const Skills =  [
                 favouriteMethodo: [
                     {
                         methodTitle: "Sketch",
-                        methodImage: images.Sketch,
+                        methodLogo: images.Sketch,
                     },
                     {
                         methodTitle: "Sass",
-                        methodImage: images.Sass,
+                        methodLogo: images.Sass,
                     }
                 ],
                 projectitem: [
@@ -263,11 +263,11 @@ const Skills =  [
                                 favouriteMethodo: [
                                     {
                                         methodTitle: "Sketch",
-                                        methodImage: images.Sketch,
+                                        methodLogo: images.Sketch,
                                     },
                                     {
                                         methodTitle: "Sass",
-                                        methodImage: images.Sass,
+                                        methodLogo: images.Sass,
                                     }
                                 ],
                                 images: [
@@ -297,11 +297,11 @@ const Skills =  [
                                 favouriteMethodo: [
                                     {
                                         methodTitle: "Sketch",
-                                        methodImage: images.Sketch,
+                                        methodLogo: images.Sketch,
                                     },
                                     {
                                         methodTitle: "Sass",
-                                        methodImage: images.Sass,
+                                        methodLogo: images.Sass,
                                     }
                                 ],
                                 images: [
@@ -326,18 +326,3 @@ const Skills =  [
 ]
 
 export default Skills;
-
-const SquareData = [
-    {
-        id: "Square Ui",
-        bgColor: "red",
-    },
-    {
-        id: "Square frontend",
-        bgColor: "blue",
-    },
-    {
-        id: "Square Retouch",
-        bgColor: "green",
-    }
-]

@@ -37,8 +37,20 @@ const TemplateMethodo = (props) => {
                 <MethodoImagesWrapper>
 
                         <MethodoImage
-                            sourceMobile={props.methodImage}
+                            sourceMobile={props.methodLogo}
                         />
+                    <MethodoImage
+                        sourceMobile={props.methodLogo}
+                    />
+                    <MethodoImage
+                        sourceMobile={props.methodLogo}
+                    />
+                    <MethodoImage
+                        sourceMobile={props.methodLogo}
+                    />
+                    <MethodoImage
+                        sourceMobile={props.methodLogo}
+                    />
 
                 </MethodoImagesWrapper>
         </TemplateMethodoWrapper>

@@ -1,14 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import {Switch,Route,Link,useRouteMatch} from "react-router-dom";
 import {media} from "../01 Atoms/mediaqueries";
 import {transitions} from "../01 Atoms/animations";
 import Skillsnavitem from "../04 Organisms/skillsnav/skillsnavitem";
 import Skills from "../01 Atoms/Data";
-import colorsRoles from "../01 Atoms/colors";
+
 import {connect} from "react-redux";
-import SkillProjects from "./skillprojects";
-import Square from "../../square";
+
 
 export const SkillsNavWrapper = styled.nav`
 margin-top: 64px;
@@ -82,26 +80,3 @@ const MapStateToProps = ({menuNav : {currentStateMenuNav}}) => ({
 export default connect(MapStateToProps)(SkillsNav);
 
 
-
-/*<Switch>
-    <Route path={"/uiux-designer"}>
-        <Square
-            bgColor={"red"}
-            nomcarre={"UI/UX"}
-        />
-    </Route>
-
-    <Route path={"/uiux-designer"}>
-        <Square
-            bgColor={"blue"}
-            nomcarre={"Frontend"}
-        />
-    </Route>
-
-    <Route path={"/uiux-designer"}>
-        <Square
-            bgColor={"purple"}
-            nomcarre={"PhotoRetouch"}
-        />
-    </Route>
-</Switch>*/
