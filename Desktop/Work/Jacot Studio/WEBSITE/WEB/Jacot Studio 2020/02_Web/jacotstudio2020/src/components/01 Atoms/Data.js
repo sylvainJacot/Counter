@@ -1,7 +1,7 @@
 import React from "react";
 
 import {colorsRoles, gradient} from "./colors";
-import {images} from "./images";
+import {images, imagesProjects} from "./images";
 
 const WrapTextDesign = (
     <>
@@ -25,53 +25,304 @@ const WrapTextRetouch = (
     </>
 );
 
-export const navigationDiscipline =  [
+const Skills =  [
     {
-        title: WrapTextDesign,
+        titleNav: WrapTextDesign,
         quote: "Lorem ipsum UX/UI Designer ezifz iugef zieg fzieg",
-        altImg: "Parrot",
-        color: colorsRoles.Brand01,
-        bottomGradient: gradient.Brand0130,
+        altMainImg: "Parrot",
+        srcMainImg: images.Parrot,
+        mainColor: colorsRoles.Brand01,
+        mainGradient: gradient.Brand0130,
         labelCTA: "Learn more",
-        src: images.Parrot,
+        pathName:"/uiux-designer",
+        skillProjects: [
+            {
+                mainTitle: "UX/UI Designer",
+                srcMainImg: images.Parrot,
+                mainColor: colorsRoles.Brand01,
+                description: "Forget Ebay and other forms of ... description",
+                favouriteMethodo: [
+                    {
+                        methodTitle: "Sketch",
+                        methodLogo: images.Sketch,
+                    },
+                    {
+                        methodTitle: "Sass",
+                        methodLogo: images.Sass,
+                    }
+                ],
+                projectitem: [
+                    {
+                        title: "Evergreen",
+                        description: "Evergreen is a great project",
+                        mainColor: colorsRoles.Brand03,
+                        mainImage: imagesProjects.MacBook,
+                        parralaxImage: imagesProjects.Leaves,
+                        projectDetails:
+                            {
+                                title: "Evergreen title",
+                                role: "Frontend",
+                                overview: "this is the overview",
+                                team: "Alphonse, Robert",
+                                favouriteMethodo: [
+                                    {
+                                        methodTitle: "Sketch",
+                                        methodLogo: images.Sketch,
+                                    },
+                                    {
+                                        methodTitle: "Sass",
+                                        methodLogo: images.Sass,
+                                    }
+                                ],
+                                images: [
+                                    {
+                                        title:"Evergreen image01",
+                                        srcImage:imagesProjects.Leaves
+                                    },
+                                    {
+                                        title:"Evergreen image02",
+                                        srcImage:imagesProjects.Leaves
+                                    }
+                                ]
+                            }
+                    },
+                    {
+                        title: "Evergreen 2",
+                        description: "Evergreen is a great project",
+                        mainColor: colorsRoles.Brand03,
+                        mainImage: imagesProjects.MacBook,
+                        parralaxImage: imagesProjects.Leaves,
+                        projectDetails:
+                            {
+                                title: "Evergreen title",
+                                role: "Frontend",
+                                overview: "this is the overview",
+                                team: "Alphonse, Robert",
+                                favouriteMethodo: [
+                                    {
+                                        methodTitle: "Sketch",
+                                        methodLogo: images.Sketch,
+                                    },
+                                    {
+                                        methodTitle: "Sass",
+                                        methodLogo: images.Sass,
+                                    }
+                                ],
+                                images: [
+                                    {
+                                        title:"Evergreen image01",
+                                        srcImage:imagesProjects.Leaves
+                                    },
+                                    {
+                                        title:"Evergreen image02",
+                                        srcImage:imagesProjects.Leaves
+                                    }
+                                ]
+                            }
+                    },
+                ]
+            }
+        ]
 
     },
     {
-        title: WrapTextFront,
-        quote: "Lorem ipsum Creative Developer",
-        altImg: "Fox",
-        color: colorsRoles.Brand02,
-        bottomGradient: gradient.Brand0230,
-        labelCTA: "Learn",
-        src: images.Parrot,
+        titleNav: WrapTextFront,
+        quote: "Lorem ipsum UX/UI Designer ezifz iugef zieg fzieg",
+        altMainImg: "Parrot",
+        srcMainImg: images.Parrot,
+        mainColor: colorsRoles.Brand02,
+        mainGradient: gradient.Brand0130,
+        labelCTA: "Learn more",
+        pathName:"/creative-developer",
+        skillProjects: [
+            {
+                mainTitle: "Creative Developer",
+                mainColor: colorsRoles.Brand02,
+                description: "Forget Ebay and other forms of ... description",
+                favouriteMethodo: [
+                    {
+                        methodTitle: "Sketch",
+                        methodLogo: images.Sketch,
+                    },
+                    {
+                        methodTitle: "Sass",
+                        methodLogo: images.Sass,
+                    }
+                ],
+                projectitem: [
+                    {
+                        title: "Evergreen",
+                        description: "Evergreen is a great project",
+                        mainColor: colorsRoles.Brand03,
+                        mainImage: imagesProjects.MacBook,
+                        parralaxImage: imagesProjects.Leaves,
+                        projectDetails:
+                            {
+                                title: "Evergreen title",
+                                role: "Frontend",
+                                overview: "this is the overview",
+                                team: "Alphonse, Robert",
+                                favouriteMethodo: [
+                                    {
+                                        methodTitle: "Sketch",
+                                        methodLogo: images.Sketch,
+                                    },
+                                    {
+                                        methodTitle: "Sass",
+                                        methodLogo: images.Sass,
+                                    }
+                                ],
+                                images: [
+                                    {
+                                        title:"Evergreen image01",
+                                        srcImage:imagesProjects.Leaves
+                                    },
+                                    {
+                                        title:"Evergreen image02",
+                                        srcImage:imagesProjects.Leaves
+                                    }
+                                ]
+                            }
+                    },
+                    {
+                        title: "Evergreen 2",
+                        description: "Evergreen is a great project",
+                        mainColor: colorsRoles.Brand03,
+                        mainImage: imagesProjects.MacBook,
+                        parralaxImage: imagesProjects.Leaves,
+                        projectDetails:
+                            {
+                                title: "Evergreen title",
+                                role: "Frontend",
+                                overview: "this is the overview",
+                                team: "Alphonse, Robert",
+                                favouriteMethodo: [
+                                    {
+                                        methodTitle: "Sketch",
+                                        methodLogo: images.Sketch,
+                                    },
+                                    {
+                                        methodTitle: "Sass",
+                                        methodLogo: images.Sass,
+                                    }
+                                ],
+                                images: [
+                                    {
+                                        title:"Evergreen image01",
+                                        srcImage:imagesProjects.Leaves
+                                    },
+                                    {
+                                        title:"Evergreen image02",
+                                        srcImage:imagesProjects.Leaves
+                                    }
+                                ]
+                            }
+                    },
+                ]
+            }
+        ]
+
     },
     {
-        title: WrapTextRetouch,
-        quote: "Lorem ipsum Photo Retoucher",
-        altImg: "Unicorne",
-        color: colorsRoles.Brand03,
-        bottomGradient: gradient.Brand0330,
+        titleNav: WrapTextRetouch,
+        quote: "Lorem ipsum UX/UI Designer ezifz iugef zieg fzieg",
+        altMainImg: "Parrot",
+        srcMainImg: images.Parrot,
+        mainColor: colorsRoles.Brand01,
+        mainGradient: gradient.Brand0130,
         labelCTA: "Learn more",
-        src: images.Parrot,
+        pathName:"/photo-retoucher",
+        skillProjects: [
+            {
+                mainTitle: "Photo Retoucher",
+                mainColor: colorsRoles.Brand03,
+                description: "Forget Ebay and other forms of ... description",
+                favouriteMethodo: [
+                    {
+                        methodTitle: "Sketch",
+                        methodLogo: images.Sketch,
+                    },
+                    {
+                        methodTitle: "Sass",
+                        methodLogo: images.Sass,
+                    }
+                ],
+                projectitem: [
+                    {
+                        title: "Evergreen",
+                        description: "Evergreen is a great project",
+                        mainColor: colorsRoles.Brand03,
+                        mainImage: imagesProjects.MacBook,
+                        parralaxImage: imagesProjects.Leaves,
+                        projectDetails:
+                            {
+                                title: "Evergreen title",
+                                role: "Frontend",
+                                overview: "this is the overview",
+                                team: "Alphonse, Robert",
+                                favouriteMethodo: [
+                                    {
+                                        methodTitle: "Sketch",
+                                        methodLogo: images.Sketch,
+                                    },
+                                    {
+                                        methodTitle: "Sass",
+                                        methodLogo: images.Sass,
+                                    }
+                                ],
+                                images: [
+                                    {
+                                        title:"Evergreen image01",
+                                        srcImage:imagesProjects.Leaves
+                                    },
+                                    {
+                                        title:"Evergreen image02",
+                                        srcImage:imagesProjects.Leaves
+                                    }
+                                ]
+                            }
+                    },
+                    {
+                        title: "Evergreen 2",
+                        description: "Evergreen is a great project",
+                        mainColor: colorsRoles.Brand03,
+                        mainImage: imagesProjects.MacBook,
+                        parralaxImage: imagesProjects.Leaves,
+                        projectDetails:
+                            {
+                                title: "Evergreen title",
+                                role: "Frontend",
+                                overview: "this is the overview",
+                                team: "Alphonse, Robert",
+                                favouriteMethodo: [
+                                    {
+                                        methodTitle: "Sketch",
+                                        methodLogo: images.Sketch,
+                                    },
+                                    {
+                                        methodTitle: "Sass",
+                                        methodLogo: images.Sass,
+                                    }
+                                ],
+                                images: [
+                                    {
+                                        title:"Evergreen image01",
+                                        srcImage:imagesProjects.Leaves
+                                    },
+                                    {
+                                        title:"Evergreen image02",
+                                        srcImage:imagesProjects.Leaves
+                                    }
+                                ]
+                            }
+                    },
+                ]
+            }
+        ]
+
     },
+
 
 ]
 
-export const methodo = [
-    {
-        title: "Favourite Methodology",
-        discipline: "UX/UI Designer",
-        tools: [
-            {name: "Sketch", SourceImage: images.Sketch},
-            {name: "Sass", SourceImage: images.Sass},
-        ]
-    },
-    {
-        title: "Favourite Methodology",
-        discipline: "UX/UI Designer",
-        tools: [
-            {name: "Sketch", SourceImage: images.Sass},
-            {name: "Sass", SourceImage: images.Sketch},
-        ]
-    }
-]
+export default Skills;

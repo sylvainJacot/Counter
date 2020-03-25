@@ -161,16 +161,16 @@ justify-content: center;
 `;
 
 
-const DisciplineHeader = (props) => {
+const Skillheader = (props) => {
     return <>
             <HeaderWrapper>
                 <HeaderMain>
-                    <DisciplinePictureWrapper MainColor={props.MainColor}>
-                        <Picture src={props.Picture} />
+                    <DisciplinePictureWrapper MainColor={props.mainColor}>
+                        <Picture src={props.srcMainImg} />
                     </DisciplinePictureWrapper>
                     <TextContent>
-                        <h1>{props.Title}</h1>
-                        <p>{props.Texte}</p>
+                        <h1>{props.mainTitle}</h1>
+                        <p>{props.description}</p>
                     </TextContent>
                 </HeaderMain>
                 <LogosWrapper>
@@ -184,4 +184,4 @@ const DisciplineHeader = (props) => {
 
 };
 
-export default DisciplineHeader;
+export default Skillheader;

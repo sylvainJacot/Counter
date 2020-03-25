@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-
-import {NavLink} from "react-router-dom";
+import {NavLink, useRouteMatch} from "react-router-dom"
 
 import {media} from "../../01 Atoms/mediaqueries";
 import {transitions, Breathe, UpDown} from "../../01 Atoms/animations";
 import {colorsRoles, gradient, backgrounds} from "../../01 Atoms/colors";
 import CTASmall from "../../02 Molecules/ctasmall";
+
 
 
 export const DisciplineNavItemWrapper = styled.li`
@@ -219,8 +219,7 @@ bottom: -32%;
 
         }
     }
-}
-`;
+}`;
 export const BrandBackground = styled.div`
 position: absolute;
 top: 0;
@@ -230,31 +229,34 @@ bottom: 0;
 background-color: ${props => props.colorBrand}16;
 `;
 
-export class DisciplineNavItem extends React.Component {
-    render() {
-        const {colorBrand,bottomGradient,altImg,label,src} = this.props;
+const Skillsnavitem = (props) => {
         return (
-              <DisciplineNavItemWrapper bottomGradient={bottomGradient}>
-                  <StyledLink to="/Frontend">
+            <>
+              <DisciplineNavItemWrapper bottomGradient={props.bottomGradient}>
+                  <StyledLink to={props.pathName}>
 
-                      <DisciplineNavItemText colorBrand={colorBrand}>
+                      <DisciplineNavItemText colorBrand={props.colorBrand}>
 
-                          <h1>{this.props.title}</h1>
-                          <p>{this.props.quote}</p>
-                          <CTASmall label={label} />
+                          <h1>{props.title}</h1>
+                          <p>{props.quote}</p>
+                          <CTASmall label={props.label} />
 
                       </DisciplineNavItemText>
 
 
-                      <img alt={altImg} src={src} />
+                      <img alt={props.altImg} src={props.src} />
 
                       <ImgShadow/>
-                      <BrandBackground colorBrand={colorBrand}/>
+                      <BrandBackground colorBrand={props.colorBrand}/>
 
                   </StyledLink>
 
               </DisciplineNavItemWrapper>
 
+        </>
+
         )
-    }
 }
+
+export default Skillsnavitem;
+

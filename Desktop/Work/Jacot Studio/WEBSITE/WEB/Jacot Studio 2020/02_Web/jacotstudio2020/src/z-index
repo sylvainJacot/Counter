@@ -1,12 +1,12 @@
 
  -1 ================
 
-  DisciplineHeader > HeaderWrapper > :after
+  Skillheader > HeaderWrapper > :after
 
  1 ================
 
   DisciplineNavItemWrapper > ImgShadow
-  DisciplineHeader > Picture
+  Skillheader > Picture
 
  2 ================
 
