@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {useParams} from "react-router-dom";
-import SquareData from "../src/components/01 Atoms/Data"
-import SquareItem from "../src/squareitem";
+import {SquareData} from "../src/components/01 Atoms/Data"
 
 export const SquareBox = styled.div`
 width: 300px;
@@ -17,19 +16,11 @@ border: 1px solid tomato;
 background-color: ${props => props.bgColor};
 `;
 
-const Square = () => {
+const SquareItem = (props) => {
     return (
         <>
-            {
-                SquareData.map((Item) =>
-            <SquareItem
-                bgColor={Item.bgColor}
-                label={Item.id}
-            />
-
-                )
-            }
+            <SquareBox bgColor={props.bgColor}>{props.label}</SquareBox>
         </>
     );
 }
-export default Square;
+export default SquareItem;

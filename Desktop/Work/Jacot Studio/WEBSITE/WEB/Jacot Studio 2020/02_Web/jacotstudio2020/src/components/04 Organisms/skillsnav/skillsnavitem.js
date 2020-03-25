@@ -1,13 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-
-import {NavLink} from "react-router-dom";
+import {NavLink, useRouteMatch} from "react-router-dom"
 
 import {media} from "../../01 Atoms/mediaqueries";
 import {transitions, Breathe, UpDown} from "../../01 Atoms/animations";
 import {colorsRoles, gradient, backgrounds} from "../../01 Atoms/colors";
 import CTASmall from "../../02 Molecules/ctasmall";
-import {useRouteMatch} from "react-router-dom"
 
 
 
@@ -232,11 +230,10 @@ background-color: ${props => props.colorBrand}16;
 `;
 
 const Skillsnavitem = (props) => {
-        let { url } = useRouteMatch();
         return (
             <>
               <DisciplineNavItemWrapper bottomGradient={props.bottomGradient}>
-                  <StyledLink to={`${url}${props.pathName}`}>
+                  <StyledLink to={props.pathName}>
 
                       <DisciplineNavItemText colorBrand={props.colorBrand}>
 

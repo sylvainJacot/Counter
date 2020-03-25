@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Switch,Route,useRouteMatch} from "react-router-dom";
+import {Switch,Route,Link,useRouteMatch} from "react-router-dom";
 import {media} from "../01 Atoms/mediaqueries";
 import {transitions} from "../01 Atoms/animations";
 import Skillsnavitem from "../04 Organisms/skillsnav/skillsnavitem";
@@ -66,7 +66,6 @@ const SkillsNav = () => {
                     </SkillsNavList>
 
                 </SkillsNavWrapper>
-
             </>
 
 

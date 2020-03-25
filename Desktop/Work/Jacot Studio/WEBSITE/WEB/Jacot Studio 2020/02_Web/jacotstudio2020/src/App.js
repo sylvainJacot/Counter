@@ -12,6 +12,7 @@ import {AboutPage} from "./components/05 Pages/aboutepage";
 import SkillsNav from "./components/05 Pages/skillsnav";
 import HeaderNavigation from "./components/04 Organisms/headernavigation/headernavigation";
 import SkillProjects from "./components/05 Pages/skillprojects";
+import Square from "./square";
 
 
 function App() {
@@ -21,9 +22,9 @@ function App() {
               <HeaderNavigation/>
               <Switch>
                   <Route exact path="/" component={SkillsNav}/>
-                  <Route path="/uiux-designer" component={SkillProjects}/>
-                  <Route path="/creative-developer" component={SkillProjects}/>
-                  <Route path="/photo-retoucher" component={SkillProjects}/>
+                  <Route path="/uiux-designer"><Square bgColor={"red"}/></Route>
+                  <Route path="/creative-developer"><Square bgColor={"blue"}/></Route>
+                  <Route path="/photo-retoucher"><Square bgColor={"green"}/></Route>
                   <Route path="/About" component={AboutPage}/>
               </Switch>
               <Footer/>

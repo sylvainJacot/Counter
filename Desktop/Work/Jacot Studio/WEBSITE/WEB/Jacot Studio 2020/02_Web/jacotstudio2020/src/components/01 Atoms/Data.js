@@ -326,3 +326,18 @@ const Skills =  [
 ]
 
 export default Skills;
+
+const SquareData = [
+    {
+        id: "Square Ui",
+        bgColor: "red",
+    },
+    {
+        id: "Square frontend",
+        bgColor: "blue",
+    },
+    {
+        id: "Square Retouch",
+        bgColor: "green",
+    }
+]
