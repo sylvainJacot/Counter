@@ -7,6 +7,7 @@ import MethodoImage from "../../02 Molecules/methodoImage";
 
 export const TemplateMethodoWrapper = styled.section`
 background-color: ${colorsRoles.White};
+width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -17,6 +18,7 @@ font-family: PlayfairDisplay-Regular_Black;
 font-size: 4rem;
 line-height: 48px;
 color: ${colorsRoles.DarkGrey};
+margin-bottom: 40px;
 ${media.desktop`
 font-size: 6rem;
 line-height: 84px;
@@ -27,6 +29,7 @@ align-items: unset;
 
 export const MethodoImagesWrapper = styled.div`
 display: flex;
+justify-content: space-between;
 `;
 
 

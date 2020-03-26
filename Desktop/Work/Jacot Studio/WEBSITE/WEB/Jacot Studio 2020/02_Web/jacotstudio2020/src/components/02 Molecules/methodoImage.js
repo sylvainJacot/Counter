@@ -9,14 +9,12 @@ export const ToolTip = styled.span`
 display: none;
 position: absolute;
 padding: 0 24px;
-width: fit-content;
-height: 24px;
 border-radius: 8px;
 background-color: tomato;
 
-left: 0;
-bottom: 0;
-transform: translate(50%,-50%);
+left: 50%;
+top: 100%;
+transform: translate(-50%,50%);
 
 font-family: Roboto-Regular;
 font-size: 16px;
@@ -39,6 +37,9 @@ transform: rotate(45deg);
 `;
 export const Box = styled.div`
 position: relative;
+width: 100%;
+height: 100%;
+margin: 0 40px;
 &:hover {
 ${ToolTip} {
 display: block;
@@ -54,7 +55,6 @@ height: 64px;
 border-radius: 8px;
 padding: 8px;
 overflow: hidden;
-cursor: pointer;
 &:after{
 content: "";
 display: block;
