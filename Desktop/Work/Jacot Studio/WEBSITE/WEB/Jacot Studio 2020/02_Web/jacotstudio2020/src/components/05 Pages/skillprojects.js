@@ -31,6 +31,8 @@ const SkillProjects  = ({}) => {
                                 methodLogo={images.Sketch}
                             />
                             <NavProjectItem />
+                            <NavProjectItem />
+                            <NavProjectItem />
                         </Box>
 
 
