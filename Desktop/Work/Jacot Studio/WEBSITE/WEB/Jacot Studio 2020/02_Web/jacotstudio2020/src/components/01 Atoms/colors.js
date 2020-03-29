@@ -20,6 +20,10 @@ export const colorsRoles = {
     Sketch: colors.OrangeSketch
 }
 
+export const projectColors = {
+    Evergreen: "#6CCDAC",
+}
+
 export const gradient = {
     Brand0130 : "background-image: linear-gradient(0deg, #F9CA1C 0%, rgba(250,209,42,0.00) 100%); opacity: 30%",
     Brand0230 : "background-image: linear-gradient(0deg, #FA2A62 0%, rgba(250,209,42,0.00) 100%); opacity: 30%",

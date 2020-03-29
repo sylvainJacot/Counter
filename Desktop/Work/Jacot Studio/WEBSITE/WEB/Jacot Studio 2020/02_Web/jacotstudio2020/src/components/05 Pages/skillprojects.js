@@ -6,6 +6,7 @@ import {media} from "../01 Atoms/mediaqueries";
 import Skills from "../01 Atoms/Data";
 import {images} from "../01 Atoms/images";
 import TemplateMethodo from "../04 Organisms/skillpage/templatemethodo";
+import NavProjectItem from "../04 Organisms/navproject/navprojectitem";
 
 
 export const Box = styled.div`
@@ -29,6 +30,7 @@ const SkillProjects  = ({}) => {
                             <TemplateMethodo
                                 methodLogo={images.Sketch}
                             />
+                            <NavProjectItem />
                         </Box>
 
 

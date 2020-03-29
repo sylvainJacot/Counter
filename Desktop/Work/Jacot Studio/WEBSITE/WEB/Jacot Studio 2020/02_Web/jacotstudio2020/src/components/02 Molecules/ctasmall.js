@@ -16,23 +16,8 @@ margin-top: 24px;
 border: 1px solid ${colorsRoles.White};
 border-radius: 8px;
 transition: ${transitions.basic2};
-${media.desktop`
-padding: 8px 16px 8px 0px;
-`}
 
 
-/*&:after {
-content: "";
-display: block;
-position: absolute;
-border-radius: 6px;
-z-index: -1;
-top: 0;
-bottom: 0;
-right: 0;
-left: 0;
-background-color: ${colorsRoles.Brand01};
-}*/
 `;
 export const Content = styled.div`
 display: flex;
@@ -53,7 +38,7 @@ const CTASmall = (props,pathName) => {
             <Content>
                 {props.label}
             <IcArrow
-                Size={"16px"}
+                IconSize={"16px"}
                 SizeBis={"auto"}
                 FillColor={colorsRoles.White}
             />
