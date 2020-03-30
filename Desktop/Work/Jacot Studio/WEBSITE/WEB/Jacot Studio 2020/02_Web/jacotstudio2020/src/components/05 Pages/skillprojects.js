@@ -17,6 +17,8 @@ margin-right: 80px;
 `;
 
 const SkillProjects  = ({}) => {
+
+
         return (
             <>
 
