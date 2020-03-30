@@ -1,27 +1,34 @@
 import React from "react";
 import styled from "styled-components";
 
-import {media} from "../../01 Atoms/mediaqueries";
+
 import {imagesProjects} from "../../01 Atoms/images";
 import CTADefault from "../../02 Molecules/ctadefault";
 import {colorsRoles,projectColors} from "../../01 Atoms/colors";
 import {ResponsiveImage} from "../../01 Atoms/ResponsiveImage";
+import Parallax from "react-rellax";
 
 
 export const Box = styled.section`
+position: relative;
 width: 100%;
 height: 880px;
 display: flex;
 `;
-export const LeftContent = styled.div``;
-export const LeftSideContent = styled.div`
+export const LeftContent = styled.div`
+
+height: 100%;
+`;
+export const LeftSide= styled.div`
 width: 50%;
+height: 100%;
 display: flex;
+justify-content: center;
 align-items: center;
 
     ${LeftContent} {
     width: 480px;
-    margin-left: 64px;
+    height: fit-content;
     & p {
     font-family: Roboto-LightItalic;
     font-size: 16px;
@@ -51,24 +58,24 @@ align-items: center;
 }
 `;
 export const ForeGroundPic = styled.div``;
-export const RightSideContent = styled.div`
+export const BackGroundPic = styled.div``;
+export const RightSide = styled.div`
 width: 50%;
-background-color: ${projectColors.Evergreen};
+height: 100%;
+background-color: ${props => props.BgColor};
 position: relative;
 
-& picture {
+& ${BackGroundPic} {
 position: absolute;
-left: -88px;
 top: 50%;
-transform: translateY(-50%);
+right: 60%;
+transform: translate(50%,-50%);
 }
 & ${ForeGroundPic} {
-
-    & picture {
-    left: -50%;
-    top: 50%;
-    transform: translateX(50%);
-    }
+    position: absolute;
+    right: 80%;
+    top: 80%;
+    transform: translate(50%,-50%);
 }
 
 
@@ -77,10 +84,12 @@ transform: translateY(-50%);
 
 
 const NavProjectItem = (props) => {
+
     return (
         <>
+
             <Box>
-                <LeftSideContent>
+                <LeftSide>
                     <LeftContent>
                         <p>Test</p>
                         <h3>Evergreen</h3>
@@ -90,25 +99,40 @@ const NavProjectItem = (props) => {
                             to={"/"}
                         />
                     </LeftContent>
-                </LeftSideContent>
+                </LeftSide>
 
-                <RightSideContent>
-                    <ResponsiveImage
-                        sourceMobile={imagesProjects.MacBook}
-                    />
-                    <ForeGroundPic>
-                        <ResponsiveImage
-                            sourceMobile={imagesProjects.Leaves}
+
+                    <RightSide BgColor={props.BgColor}>
+
+                        <BackGroundPic>
+                        <Parallax speed={2} percentage={0} >
+                            <ResponsiveImage
+                                sourceMobile={imagesProjects.MacBook}
                             />
-                    </ForeGroundPic>
-                </RightSideContent>
+                        </Parallax>
+                        </BackGroundPic>
+
+
+                                <ForeGroundPic>
+                                    <Parallax speed={8} percentage={0}>
+                                    <ResponsiveImage
+                                        sourceMobile={imagesProjects.Leaves}
+                                    />
+                                    </Parallax>
+                                </ForeGroundPic>
+
+
+                </RightSide>
+
 
             </Box>
+
+
 
         </>
 
     )
-}
+};
 
 export default NavProjectItem;
 

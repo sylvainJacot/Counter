@@ -5,7 +5,7 @@ import {colorsRoles, backgrounds, gradient} from "../../01 Atoms/colors";
 import {transitions} from "../../01 Atoms/animations";
 import {LogoSamsung} from "../../01 Atoms/icons";
 
-export const HeaderWrapper = styled.section`
+export const HeaderWrapper = styled.header`
 position: relative;
 display: flex;
 flex-direction: column;

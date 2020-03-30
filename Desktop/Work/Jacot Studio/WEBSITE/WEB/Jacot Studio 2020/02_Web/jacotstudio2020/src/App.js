@@ -11,7 +11,7 @@ import {Footer} from "./components/04 Organisms/footer/footer";
 import {AboutPage} from "./components/05 Pages/aboutepage";
 import SkillsNav from "./components/05 Pages/skillsnav";
 import HeaderNavigation from "./components/04 Organisms/headernavigation/headernavigation";
-import SkillProjects from "./components/05 Pages/skillprojects";
+import {SkillProjects} from "./components/05 Pages/skillprojects";
 
 
 function App() {
