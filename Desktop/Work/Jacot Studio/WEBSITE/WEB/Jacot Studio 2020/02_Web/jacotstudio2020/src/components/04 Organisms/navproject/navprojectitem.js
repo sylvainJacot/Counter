@@ -62,7 +62,6 @@ export const BackGroundPic = styled.div``;
 export const RightSide = styled.div`
 width: 50%;
 height: 100%;
-background-color: ${props => props.BgColor};
 position: relative;
 
 & ${BackGroundPic} {
