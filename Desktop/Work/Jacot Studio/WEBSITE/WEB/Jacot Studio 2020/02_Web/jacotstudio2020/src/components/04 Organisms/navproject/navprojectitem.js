@@ -58,24 +58,24 @@ align-items: center;
 }
 `;
 export const ForeGroundPic = styled.div``;
+export const BackGroundPic = styled.div``;
 export const RightSide = styled.div`
 width: 50%;
 height: 100%;
 background-color: ${props => props.BgColor};
 position: relative;
 
-& picture {
+& ${BackGroundPic} {
 position: absolute;
 top: 50%;
-right: 56%;
+right: 60%;
 transform: translate(50%,-50%);
 }
 & ${ForeGroundPic} {
     position: absolute;
-    bottom: 25%;
+    right: 80%;
+    top: 80%;
     transform: translate(50%,-50%);
-    & picture {
-    }
 }
 
 
@@ -104,13 +104,17 @@ const NavProjectItem = (props) => {
 
                     <RightSide BgColor={props.BgColor}>
 
+                        <BackGroundPic>
+                        <Parallax speed={2} percentage={0} >
                             <ResponsiveImage
                                 sourceMobile={imagesProjects.MacBook}
                             />
+                        </Parallax>
+                        </BackGroundPic>
 
 
                                 <ForeGroundPic>
-                                    <Parallax speed={3} percentage={0}>
+                                    <Parallax speed={8} percentage={0}>
                                     <ResponsiveImage
                                         sourceMobile={imagesProjects.Leaves}
                                     />
