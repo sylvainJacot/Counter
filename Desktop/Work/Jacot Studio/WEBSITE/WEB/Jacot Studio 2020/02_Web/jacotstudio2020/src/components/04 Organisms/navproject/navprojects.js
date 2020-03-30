@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import {projectColors,colorsRoles} from "../../01 Atoms/colors";
 
-import {Parallax} from "react-spring/renderprops-addons";
+import Parallax from "react-rellax/lib/index";
 
 import NavProjectItem from "../navproject/navprojectitem";
 
@@ -23,11 +23,6 @@ const NavProjects  = () => {
 
                 <NavProjectItem
                     BgColor={projectColors.Evergreen}/>
-                <NavProjectItem
-                    BgColor={colorsRoles.Brand03}/>
-                <NavProjectItem
-                    BgColor={colorsRoles.Sketch}/>
-
             </Box>
 
         </>

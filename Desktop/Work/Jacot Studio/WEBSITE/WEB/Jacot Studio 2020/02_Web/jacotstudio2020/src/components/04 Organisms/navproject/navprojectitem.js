@@ -6,8 +6,7 @@ import {imagesProjects} from "../../01 Atoms/images";
 import CTADefault from "../../02 Molecules/ctadefault";
 import {colorsRoles,projectColors} from "../../01 Atoms/colors";
 import {ResponsiveImage} from "../../01 Atoms/ResponsiveImage";
-import {ParallaxLayer} from "react-spring/renderprops-addons";
-
+import Parallax from "react-rellax"
 
 
 export const Box = styled.section`
@@ -15,17 +14,21 @@ position: relative;
 width: 100%;
 height: 880px;
 display: flex;
-
 `;
-export const LeftContent = styled.div``;
-export const LeftSideContent = styled.div`
+export const LeftContent = styled.div`
+
+height: 100%;
+`;
+export const LeftSide= styled.div`
 width: 50%;
+height: 100%;
 display: flex;
+justify-content: center;
 align-items: center;
 
     ${LeftContent} {
     width: 480px;
-    margin-left: 64px;
+    height: fit-content;
     & p {
     font-family: Roboto-LightItalic;
     font-size: 16px;
@@ -55,24 +58,24 @@ align-items: center;
 }
 `;
 export const ForeGroundPic = styled.div``;
-export const RightSideContent = styled.div`
+export const RightSide = styled.div`
 width: 50%;
 height: 100%;
 background-color: ${props => props.BgColor};
-position: relative;
 
 & picture {
 position: absolute;
-left: -88px;
 top: 50%;
-transform: translateY(-50%);
+right: 25%;
+margin-right: 88px;
+transform: translate(50%,-50%);
 }
 & ${ForeGroundPic} {
-
     & picture {
-    left: -50%;
-    top: 50%;
-    transform: translateX(50%);
+    position: absolute;
+    left: 0;
+    top:75%;
+    transform: translate(50%,-50%);
     }
 }
 
@@ -87,7 +90,7 @@ const NavProjectItem = (props) => {
         <>
 
             <Box>
-                <LeftSideContent>
+                <LeftSide>
                     <LeftContent>
                         <p>Test</p>
                         <h3>Evergreen</h3>
@@ -97,20 +100,22 @@ const NavProjectItem = (props) => {
                             to={"/"}
                         />
                     </LeftContent>
-                </LeftSideContent>
+                </LeftSide>
 
-                <RightSideContent BgColor={props.BgColor}>
 
-                    <ResponsiveImage
-                        sourceMobile={imagesProjects.MacBook}
-                    />
+                    <RightSide BgColor={props.BgColor}>
+
+                            <ResponsiveImage
+                                sourceMobile={imagesProjects.MacBook}
+                            />
 
                                 <ForeGroundPic>
                                     <ResponsiveImage
                                         sourceMobile={imagesProjects.Leaves}
                                     />
                                 </ForeGroundPic>
-                </RightSideContent>
+
+                </RightSide>
 
 
             </Box>

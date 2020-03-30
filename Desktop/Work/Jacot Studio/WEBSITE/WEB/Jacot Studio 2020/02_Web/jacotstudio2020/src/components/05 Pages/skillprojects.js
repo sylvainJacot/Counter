@@ -14,7 +14,6 @@ import {Parallax} from "react-spring/renderprops-addons";
 
 
 export const Box = styled.div`
-width: 100%;
 position: relative;
 ${media.desktop`
 margin-right: 80px;
