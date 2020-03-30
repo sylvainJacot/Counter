@@ -127,7 +127,7 @@ const NavProjectItem = (props) => {
                                     />
                                     </Parallax>
                                 </ForeGroundPic>
-                        
+
 
 
                 </RightSide>
