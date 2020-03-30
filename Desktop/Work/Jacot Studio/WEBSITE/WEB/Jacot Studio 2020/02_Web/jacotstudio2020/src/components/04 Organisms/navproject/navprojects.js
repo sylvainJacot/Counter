@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 import {projectColors,colorsRoles} from "../../01 Atoms/colors";
 
-import Parallax from "react-rellax/lib/index";
 
 import NavProjectItem from "../navproject/navprojectitem";
 import {transitions} from "../../01 Atoms/animations";
@@ -11,8 +10,6 @@ import {transitions} from "../../01 Atoms/animations";
 export const Box = styled.div`
 width: 100%;
 height: 100%;
-background-color: ${props => props.BgColor};
-transition: ${transitions.basic2};
 `;
 
 
@@ -20,14 +17,13 @@ transition: ${transitions.basic2};
 export class NavProjects extends React.Component {
     constructor() {
         super();
+        this.myRef = React.createRef();
         this.state = {
-            bgColor: "red",
+            bgColor: "",
             YPos: 0,
-            myRef: React.createRef(),
+            refPos: 0,
         };
     }
-
-    ExampleRef = React.createRef();
 
     componentDidMount() {
         window.addEventListener('scroll',this.handleScroll);
@@ -40,29 +36,50 @@ export class NavProjects extends React.Component {
 
     handleScroll = () => {
 
-        let lastScrollY = window.pageYOffset;
+        let lastScrollY = window.pageYOffset + 160;
+        let ref = this.myRef.current;
+        let refTop = ref.offsetTop;
 
+        const Bg1 = colorsRoles.Brand01;
+        const Bg2 = colorsRoles.Brand02;
+        const Bg3 = colorsRoles.Brand03;
+        const Bg4 = colorsRoles.Sketch;
 
         this.setState({YPos:lastScrollY});
         console.log(lastScrollY);
+        console.log(refTop);
+
+
 
         if (lastScrollY >= 0)  {
             window.requestAnimationFrame(() => {
                 this.setState({bgColor:"none"})
             });
 
-        if (lastScrollY >= 1000) {
+        if (lastScrollY >= refTop) {
             window.requestAnimationFrame(() => {
-                this.setState({bgColor:"blue"})
+                this.setState({bgColor:Bg1})
             });
 
         }
-        if (lastScrollY >= 2000) {
+        if (lastScrollY >= refTop + 880) {
             window.requestAnimationFrame(() => {
-                this.setState({bgColor:"yellow"})
+                this.setState({bgColor:Bg2})
             });
 
         }
+            if (lastScrollY >= refTop + 880 * 2) {
+                window.requestAnimationFrame(() => {
+                    this.setState({bgColor:Bg3})
+                });
+
+            }
+            if (lastScrollY >= refTop + 880 * 3) {
+                window.requestAnimationFrame(() => {
+                    this.setState({bgColor:Bg4})
+                });
+
+            }
 
 
         }
@@ -72,11 +89,12 @@ export class NavProjects extends React.Component {
     render() {
         return (
             <>
-                <Box BgColor={`${this.state.bgColor}`} ref={this.ExampleRef}>
+                <Box  ref={this.myRef}>
 
-                    <NavProjectItem ref={this.myRef}/>
-                    <NavProjectItem/>
-                    <NavProjectItem/>
+                    <NavProjectItem BgColor={`${this.state.bgColor}`}/>
+                    <NavProjectItem BgColor={`${this.state.bgColor}`}/>
+                    <NavProjectItem BgColor={`${this.state.bgColor}`}/>
+                    <NavProjectItem BgColor={`${this.state.bgColor}`}/>
                 </Box>
 
             </>
