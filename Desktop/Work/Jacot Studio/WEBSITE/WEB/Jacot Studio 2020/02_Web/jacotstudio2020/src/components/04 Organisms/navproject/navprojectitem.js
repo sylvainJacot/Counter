@@ -16,7 +16,6 @@ width: 100%;
 height: 880px;
 display: flex;
 
-
 `;
 export const LeftContent = styled.div``;
 export const LeftSideContent = styled.div`
@@ -105,13 +104,12 @@ const NavProjectItem = (props) => {
                     <ResponsiveImage
                         sourceMobile={imagesProjects.MacBook}
                     />
-                    <ParallaxLayer offset={0} speed={0.5}>
+
                                 <ForeGroundPic>
                                     <ResponsiveImage
                                         sourceMobile={imagesProjects.Leaves}
                                     />
                                 </ForeGroundPic>
-                    </ParallaxLayer>
                 </RightSideContent>
 
 

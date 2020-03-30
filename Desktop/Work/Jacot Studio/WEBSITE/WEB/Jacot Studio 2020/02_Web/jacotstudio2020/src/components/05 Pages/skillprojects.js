@@ -8,11 +8,13 @@ import {media} from "../01 Atoms/mediaqueries";
 import {images} from "../01 Atoms/images";
 import TemplateMethodo from "../04 Organisms/skillpage/templatemethodo";
 import NavProjects from "../04 Organisms/navproject/navprojects";
+import {Parallax} from "react-spring/renderprops-addons";
 
 
 
 
 export const Box = styled.div`
+width: 100%;
 position: relative;
 ${media.desktop`
 margin-right: 80px;
@@ -21,12 +23,14 @@ margin-right: 80px;
 `;
 
 
-const SkillProjects  = () => {
+export class SkillProjects extends React.Component {
 
-
+render() {
         return (
             <>
+
                         <Box>
+
 
                             <Skillheader
                                 mainTitle={"Titre 01"}
@@ -40,12 +44,14 @@ const SkillProjects  = () => {
 
                             <NavProjects/>
 
+
                         </Box>
 
 
                 </>
         )
 }
+}
 
-export default SkillProjects;
+
 
