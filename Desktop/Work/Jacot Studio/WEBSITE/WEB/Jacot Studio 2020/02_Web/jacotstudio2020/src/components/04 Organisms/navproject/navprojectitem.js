@@ -1,17 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-import {media} from "../../01 Atoms/mediaqueries";
+
 import {imagesProjects} from "../../01 Atoms/images";
 import CTADefault from "../../02 Molecules/ctadefault";
 import {colorsRoles,projectColors} from "../../01 Atoms/colors";
 import {ResponsiveImage} from "../../01 Atoms/ResponsiveImage";
+import {ParallaxLayer} from "react-spring/renderprops-addons";
+
 
 
 export const Box = styled.section`
+position: relative;
 width: 100%;
 height: 880px;
 display: flex;
+
+
 `;
 export const LeftContent = styled.div``;
 export const LeftSideContent = styled.div`
@@ -53,7 +58,8 @@ align-items: center;
 export const ForeGroundPic = styled.div``;
 export const RightSideContent = styled.div`
 width: 50%;
-background-color: ${projectColors.Evergreen};
+height: 100%;
+background-color: ${props => props.BgColor};
 position: relative;
 
 & picture {
@@ -77,8 +83,10 @@ transform: translateY(-50%);
 
 
 const NavProjectItem = (props) => {
+
     return (
         <>
+
             <Box>
                 <LeftSideContent>
                     <LeftContent>
@@ -92,23 +100,29 @@ const NavProjectItem = (props) => {
                     </LeftContent>
                 </LeftSideContent>
 
-                <RightSideContent>
+                <RightSideContent BgColor={props.BgColor}>
+
                     <ResponsiveImage
                         sourceMobile={imagesProjects.MacBook}
                     />
-                    <ForeGroundPic>
-                        <ResponsiveImage
-                            sourceMobile={imagesProjects.Leaves}
-                            />
-                    </ForeGroundPic>
+                    <ParallaxLayer offset={0} speed={0.5}>
+                                <ForeGroundPic>
+                                    <ResponsiveImage
+                                        sourceMobile={imagesProjects.Leaves}
+                                    />
+                                </ForeGroundPic>
+                    </ParallaxLayer>
                 </RightSideContent>
 
+
             </Box>
+
+
 
         </>
 
     )
-}
+};
 
 export default NavProjectItem;
 
