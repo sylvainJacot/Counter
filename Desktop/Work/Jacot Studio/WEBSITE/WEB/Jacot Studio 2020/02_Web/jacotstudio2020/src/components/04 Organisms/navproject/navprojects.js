@@ -21,8 +21,9 @@ const NavProjects  = () => {
 
             <Box>
 
-                <NavProjectItem
-                    BgColor={projectColors.Evergreen}/>
+                <NavProjectItem BgColor={projectColors.Evergreen}/>
+                <NavProjectItem BgColor={colorsRoles.Brand03}/>
+                <NavProjectItem BgColor={colorsRoles.Brand01}/>
             </Box>
 
         </>

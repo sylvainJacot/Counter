@@ -6,7 +6,7 @@ import {imagesProjects} from "../../01 Atoms/images";
 import CTADefault from "../../02 Molecules/ctadefault";
 import {colorsRoles,projectColors} from "../../01 Atoms/colors";
 import {ResponsiveImage} from "../../01 Atoms/ResponsiveImage";
-import Parallax from "react-rellax"
+import Parallax from "react-rellax";
 
 
 export const Box = styled.section`
@@ -62,20 +62,19 @@ export const RightSide = styled.div`
 width: 50%;
 height: 100%;
 background-color: ${props => props.BgColor};
+position: relative;
 
 & picture {
 position: absolute;
 top: 50%;
-right: 25%;
-margin-right: 88px;
+right: 56%;
 transform: translate(50%,-50%);
 }
 & ${ForeGroundPic} {
-    & picture {
     position: absolute;
-    left: 0;
-    top:75%;
+    bottom: 25%;
     transform: translate(50%,-50%);
+    & picture {
     }
 }
 
@@ -109,11 +108,15 @@ const NavProjectItem = (props) => {
                                 sourceMobile={imagesProjects.MacBook}
                             />
 
+
                                 <ForeGroundPic>
+                                    <Parallax speed={3} percentage={0}>
                                     <ResponsiveImage
                                         sourceMobile={imagesProjects.Leaves}
                                     />
+                                    </Parallax>
                                 </ForeGroundPic>
+
 
                 </RightSide>
 
