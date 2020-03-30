@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-
+import {transitions} from "../../01 Atoms/animations";
 import {imagesProjects} from "../../01 Atoms/images";
 import CTADefault from "../../02 Molecules/ctadefault";
 import {colorsRoles,projectColors} from "../../01 Atoms/colors";
@@ -62,20 +62,27 @@ export const BackGroundPic = styled.div``;
 export const RightSide = styled.div`
 width: 50%;
 height: 100%;
-background-color: ${props => props.BgColor};
 position: relative;
+background-color: ${props => props.BgColor};
+transition: ${transitions.basic2};
 
 & ${BackGroundPic} {
 position: absolute;
-top: 50%;
+top: 55%;
 right: 60%;
 transform: translate(50%,-50%);
 }
 & ${ForeGroundPic} {
     position: absolute;
-    right: 80%;
+    right: 110%;
     top: 80%;
     transform: translate(50%,-50%);
+    
+    & img {
+    width: 240px;
+    }
+
+    }
 }
 
 
@@ -120,6 +127,7 @@ const NavProjectItem = (props) => {
                                     />
                                     </Parallax>
                                 </ForeGroundPic>
+                        
 
 
                 </RightSide>

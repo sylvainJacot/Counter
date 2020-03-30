@@ -7,7 +7,7 @@ import {media} from "../01 Atoms/mediaqueries";
 
 import {images} from "../01 Atoms/images";
 import TemplateMethodo from "../04 Organisms/skillpage/templatemethodo";
-import NavProjects from "../04 Organisms/navproject/navprojects";
+import {NavProjects} from "../04 Organisms/navproject/navprojects";
 
 
 
