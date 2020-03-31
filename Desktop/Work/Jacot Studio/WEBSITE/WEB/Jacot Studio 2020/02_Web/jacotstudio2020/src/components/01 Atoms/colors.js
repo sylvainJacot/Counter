@@ -3,6 +3,7 @@ export const colors = {
     Red : "#FA2A62",
     Purple : "#5B2AFA",
     DarkGrey : "#222222",
+    DarkGrey2 : "#7D7D7D",
     LightGrey : "#C5C5C5",
     White : "#F8F8F8",
     Black : "#000",
@@ -15,6 +16,7 @@ export const colorsRoles = {
     Brand03 : colors.Purple,
     White : colors.White,
     DarkGrey: colors.DarkGrey,
+    DarkGrey2: colors.DarkGrey2,
     LightGrey : colors.LightGrey,
     Black: colors.Black,
     Sketch: colors.OrangeSketch

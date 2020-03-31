@@ -9,14 +9,17 @@ export class ResponsiveImage extends React.Component {
         sourceDesktop: PropTypes.string,
         breakPoint: PropTypes.number
     };
+
+
     render() {
         const {sourceMobile, altImage, sourceDesktop, breakPoint} = this.props;
+
         return (
-            <picture>
-                <source 
+            <picture >
+                <source
                     srcSet={sourceDesktop}
                     media={"(min-width: " + breakPoint + "px)"}
-                /> 
+                />
                 <img
                     src={sourceMobile}
                     alt={altImage}

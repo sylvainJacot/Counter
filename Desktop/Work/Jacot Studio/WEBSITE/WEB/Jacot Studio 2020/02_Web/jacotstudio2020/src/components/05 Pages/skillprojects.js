@@ -37,9 +37,7 @@ render() {
                                 srcMainImg={images.Parrot}
                                 description={"Description 01"}
                             />
-                            <TemplateMethodo
-                                methodLogo={images.Sketch}
-                            />
+                            <TemplateMethodo/>
 
                             <NavProjects/>
 
