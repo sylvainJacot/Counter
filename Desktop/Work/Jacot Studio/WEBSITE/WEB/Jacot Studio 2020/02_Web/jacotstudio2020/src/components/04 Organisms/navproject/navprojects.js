@@ -133,7 +133,11 @@ export class NavProjects extends React.Component {
             <>
                 <Box  ref={this.myRef}>
 
-                    <NavProjectItem BgColor={`${this.state.bgColor}`}/>
+                    <NavProjectItem
+                        BgColor={`${this.state.bgColor}`}
+                        pathName={"/"}
+
+                    />
                     <NavProjectItem BgColor={`${this.state.bgColor}`}/>
                     <NavProjectItem BgColor={`${this.state.bgColor}`}/>
                     <NavProjectItem BgColor={`${this.state.bgColor}`}/>

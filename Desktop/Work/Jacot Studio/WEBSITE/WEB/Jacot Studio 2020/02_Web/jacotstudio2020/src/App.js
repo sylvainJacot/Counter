@@ -12,6 +12,7 @@ import {AboutPage} from "./components/05 Pages/aboutepage";
 import SkillsNav from "./components/05 Pages/skillsnav";
 import HeaderNavigation from "./components/04 Organisms/headernavigation/headernavigation";
 import {SkillProjects} from "./components/05 Pages/skillprojects";
+import ProjectPage from "./components/05 Pages/projectpage";
 
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
                   <Route exact path="/" component={SkillsNav}/>
                   <Route path="/uiux-designer" component={SkillProjects}/>
                   <Route path="/About" component={AboutPage}/>
+
+                  <Route path="/test" component={ProjectPage} />
+
               </Switch>
               <Footer/>
           </div>
