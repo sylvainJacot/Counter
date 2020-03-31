@@ -117,7 +117,7 @@ right: 50%;
 `}
 
 ${media.tablet`
-top:48%;
+top:40%;
 right: 50%;
 `}
 
