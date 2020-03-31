@@ -206,7 +206,7 @@ const NavProjectItem = (props) => {
                         <p>Recently I came across an exciting video on the internet. The video was packed with information about marketing and how.</p>
                         <CTADefault
                             label={"See Project"}
-                            to={"/"}
+                            to={props.pathName}
                         />
                     </LeftContent>
                 </LeftSide>

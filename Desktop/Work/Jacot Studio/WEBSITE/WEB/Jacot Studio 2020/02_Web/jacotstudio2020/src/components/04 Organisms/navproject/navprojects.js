@@ -1,11 +1,11 @@
 import React from "react";
+import throttle from 'lodash.throttle';
 
 import styled from "styled-components";
-import {projectColors,colorsRoles} from "../../01 Atoms/colors";
+import {colorsRoles} from "../../01 Atoms/colors";
 
 
 import NavProjectItem from "../navproject/navprojectitem";
-import {transitions} from "../../01 Atoms/animations";
 
 export const Box = styled.div`
 width: 100%;
@@ -17,6 +17,7 @@ height: 100%;
 export class NavProjects extends React.Component {
     constructor() {
         super();
+        this.handleScroll = throttle(this.handleScroll, 1000);
         this.myRef = React.createRef();
         this.state = {
             bgColor: "",
@@ -24,23 +25,12 @@ export class NavProjects extends React.Component {
             refPos: 0,
         };
     }
-
     componentDidMount() {
         window.addEventListener('scroll',this.handleScroll);
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll',this.handleScroll);
-    }
-
-
-
-    ResponSive(MediaQueryDesktop) {
-        if (MediaQueryDesktop.matches) { // If media query matches
-            document.body.style.backgroundColor = "yellow";
-        } else {
-            document.body.style.backgroundColor = "pink";
-        }
     }
 
 
@@ -143,7 +133,11 @@ export class NavProjects extends React.Component {
             <>
                 <Box  ref={this.myRef}>
 
-                    <NavProjectItem BgColor={`${this.state.bgColor}`}/>
+                    <NavProjectItem
+                        BgColor={`${this.state.bgColor}`}
+                        pathName={"/"}
+
+                    />
                     <NavProjectItem BgColor={`${this.state.bgColor}`}/>
                     <NavProjectItem BgColor={`${this.state.bgColor}`}/>
                     <NavProjectItem BgColor={`${this.state.bgColor}`}/>
