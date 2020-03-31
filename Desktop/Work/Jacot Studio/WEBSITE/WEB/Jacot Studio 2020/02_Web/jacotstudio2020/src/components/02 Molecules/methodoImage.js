@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {media} from "../01 Atoms/mediaqueries";
 import {gradient} from "../01 Atoms/colors";
 import {transitions} from "../01 Atoms/animations";
 import {ResponsiveImage} from "../01 Atoms/ResponsiveImage";
@@ -37,9 +38,12 @@ transform: rotate(45deg);
 `;
 export const Box = styled.div`
 position: relative;
-width: 100%;
-height: 100%;
+margin: 0 8px;
+
+${media.desktop`
 margin: 0 40px;
+`}
+
 &:hover {
 ${ToolTip} {
 display: block;

@@ -130,11 +130,14 @@ align-items: unset;
 }
 p {
 font-family: Roboto-Regular;
-font-size: 24px;
+font-size: 16px;
 color: ${colorsRoles.White};
 letter-spacing: 0;
 line-height: 36px;
 margin-top: 42px;
+${media.desktop`
+font-size: 24px;;
+`}
 }
 `;
 

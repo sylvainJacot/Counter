@@ -40,6 +40,8 @@ export class NavProjects extends React.Component {
         let ref = this.myRef.current;
         let refTop = ref.offsetTop;
 
+        const NavProjectItemHeightDesktop = 880;
+
         const Bg1 = colorsRoles.Brand01;
         const Bg2 = colorsRoles.Brand02;
         const Bg3 = colorsRoles.Brand03;
@@ -62,13 +64,13 @@ export class NavProjects extends React.Component {
             });
 
         }
-        if (lastScrollY >= refTop + 880) {
+        if (lastScrollY >= refTop + NavProjectItemHeightDesktop) {
             window.requestAnimationFrame(() => {
                 this.setState({bgColor:Bg2})
             });
 
         }
-            if (lastScrollY >= refTop + 880 * 2) {
+            if (lastScrollY >= refTop + NavProjectItemHeightDesktop * 2) {
                 window.requestAnimationFrame(() => {
                     this.setState({bgColor:Bg3})
                 });
