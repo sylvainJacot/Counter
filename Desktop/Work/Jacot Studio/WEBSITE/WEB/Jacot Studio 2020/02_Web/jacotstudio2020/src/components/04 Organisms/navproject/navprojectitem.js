@@ -1,0 +1,146 @@
+import React from "react";
+import styled from "styled-components";
+
+import {transitions} from "../../01 Atoms/animations";
+import {imagesProjects} from "../../01 Atoms/images";
+import CTADefault from "../../02 Molecules/ctadefault";
+import {colorsRoles,projectColors} from "../../01 Atoms/colors";
+import {ResponsiveImage} from "../../01 Atoms/ResponsiveImage";
+import Parallax from "react-rellax";
+
+
+export const Box = styled.section`
+position: relative;
+width: 100%;
+height: 880px;
+display: flex;
+`;
+export const LeftContent = styled.div`
+
+height: 100%;
+`;
+export const LeftSide= styled.div`
+width: 50%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+    ${LeftContent} {
+    width: 480px;
+    height: fit-content;
+    & p {
+    font-family: Roboto-LightItalic;
+    font-size: 16px;
+    color: ${projectColors.Evergreen};
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-bottom: 8px;
+    }
+    
+    & h3 {
+    font-family: PlayfairDisplay-Regular_Black;
+    font-size: 6rem;
+    line-height: 48px;
+    color: ${projectColors.Evergreen};
+    margin-bottom: 32px;
+    }
+    
+    & h3 ~ p {
+    font-family: Roboto-Regular;
+    font-size: 24px;
+    color: ${colorsRoles.White};
+    letter-spacing: 0;
+    line-height: 36px;
+    margin-bottom: 32px;
+    }
+
+}
+`;
+export const ForeGroundPic = styled.div``;
+export const BackGroundPic = styled.div``;
+export const RightSide = styled.div`
+width: 50%;
+height: 100%;
+position: relative;
+background-color: ${props => props.BgColor};
+transition: ${transitions.basic2};
+
+& ${BackGroundPic} {
+position: absolute;
+top: 55%;
+right: 60%;
+transform: translate(50%,-50%);
+}
+& ${ForeGroundPic} {
+    position: absolute;
+    right: 110%;
+    top: 80%;
+    transform: translate(50%,-50%);
+    
+    & img {
+    width: 240px;
+    }
+
+    }
+}
+
+
+
+`;
+
+
+const NavProjectItem = (props) => {
+
+    return (
+        <>
+
+            <Box>
+                <LeftSide>
+                    <LeftContent>
+                        <p>Test</p>
+                        <h3>Evergreen</h3>
+                        <p>Recently I came across an exciting video on the internet. The video was packed with information about marketing and how.</p>
+                        <CTADefault
+                            label={"See Project"}
+                            to={"/"}
+                        />
+                    </LeftContent>
+                </LeftSide>
+
+
+                    <RightSide BgColor={props.BgColor}>
+
+                        <BackGroundPic>
+                        <Parallax speed={2} percentage={0} >
+                            <ResponsiveImage
+                                sourceMobile={imagesProjects.MacBook}
+                            />
+                        </Parallax>
+                        </BackGroundPic>
+
+
+                                <ForeGroundPic>
+                                    <Parallax speed={8} percentage={0}>
+                                    <ResponsiveImage
+                                        sourceMobile={imagesProjects.Leaves}
+                                    />
+                                    </Parallax>
+                                </ForeGroundPic>
+
+
+
+                </RightSide>
+
+
+            </Box>
+
+
+
+        </>
+
+    )
+};
+
+export default NavProjectItem;
+
