@@ -25,11 +25,15 @@ position: relative;
 display: inline-block;
 width: fit-content;
 height: fit-content;
-padding: 24px;
-margin-top: 24px;
+padding: 16px;
+margin-top: 8px;
+margin-bottom: 16px;
 border: 1px solid ${colorsRoles.White};
 border-radius: 8px;
     ${media.desktop`
+    margin-top: 24px;
+    padding: 24px;
+    margin-bottom: 0px;
     &:hover {
             & svg {
             margin-left: 32px;

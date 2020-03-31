@@ -19,6 +19,7 @@ font-size: 4rem;
 line-height: 48px;
 color: ${colorsRoles.DarkGrey};
 margin-bottom: 40px;
+text-align: center;
 ${media.desktop`
 font-size: 6rem;
 line-height: 84px;
@@ -29,7 +30,14 @@ align-items: unset;
 
 export const MethodoImagesWrapper = styled.div`
 display: flex;
+justify-content: center;
+flex-wrap: wrap;
+
+${media.desktop`
 justify-content: space-between;
+flex-wrap: no-wrap;
+`}
+
 `;
 
 
