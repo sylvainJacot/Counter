@@ -1,5 +1,4 @@
-import React, {useState, useEffect, useRef, useCallback} from "react";
-import throttle from 'lodash.throttle';
+import React, {useState, useEffect, useRef} from "react";
 import {useRouteMatch} from "react-router-dom";
 
 
@@ -8,6 +7,7 @@ import {colorsRoles} from "../../01 Atoms/colors";
 import {UIUXProjects} from "../../01 Atoms/Data";
 
 import NavProjectItem from "../navproject/navprojectitem";
+
 
 const Box = {
     width: "100%",
@@ -19,6 +19,7 @@ const NavProjects = () => {
     const [bgColor, setbgColor] = useState("");
     const [YPos, setYPos] = useState(0);
     const myRef = useRef();
+
 
 
     useEffect(() => {
@@ -56,31 +57,31 @@ const NavProjects = () => {
 
         if (lastScrollY >= 0) {
             window.requestAnimationFrame(() => {
-                setbgColor({bgColor: "none"})
+                setbgColor("none")
             });
         }
 
         if (lastScrollY >= refTop) {
             window.requestAnimationFrame(() => {
-                setbgColor({bgColor:Bg1})
+                setbgColor(Bg1)
             });
 
         }
         if (lastScrollY >= refTop + NavProjectItemHeightMobile) {
             window.requestAnimationFrame(() => {
-                setbgColor({bgColor:Bg2})
+                setbgColor(Bg2)
             });
 
         }
             if (lastScrollY >= refTop + NavProjectItemHeightMobile * 2) {
                 window.requestAnimationFrame(() => {
-                    setbgColor({bgColor:Bg3})
+                    setbgColor(Bg3)
                 });
 
             }
             if (lastScrollY >= refTop + NavProjectItemHeightMobile * 3) {
                 window.requestAnimationFrame(() => {
-                    setbgColor({bgColor:Bg4})
+                    setbgColor(Bg4)
                 });
 
             }
@@ -90,31 +91,31 @@ const NavProjects = () => {
         else {
             if (lastScrollYDesktop >= 0) {
                 window.requestAnimationFrame(() => {
-                    setbgColor({bgColor: "none"})
+                    setbgColor("none")
                 });
             }
 
             if (lastScrollYDesktop >= refTop) {
                 window.requestAnimationFrame(() => {
-                    setbgColor({bgColor:Bg1})
+                    setbgColor(Bg1)
                 });
 
             }
             if (lastScrollYDesktop >= refTop + NavProjectItemHeightDesktop) {
                 window.requestAnimationFrame(() => {
-                    setbgColor({bgColor:Bg2})
+                    setbgColor(Bg2)
                 });
 
             }
             if (lastScrollYDesktop >= refTop + NavProjectItemHeightDesktop * 2) {
                 window.requestAnimationFrame(() => {
-                    setbgColor({bgColor:Bg3})
+                    setbgColor(Bg3)
                 });
 
             }
             if (lastScrollYDesktop >= refTop + NavProjectItemHeightDesktop * 3) {
                 window.requestAnimationFrame(() => {
-                    setbgColor({bgColor:Bg4})
+                    setbgColor(Bg4)
                 });
 
             }
