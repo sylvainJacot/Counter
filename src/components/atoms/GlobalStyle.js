@@ -220,4 +220,17 @@ template {
 [hidden] {
   display: none;
 }
+h1,h2,h3,h4,h5,h6,p,input {
+color: ${Colors.DarkGreyFont};
+margin: 0;
+padding: 0;
+font-family: Roboto;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url(./Fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+}
+
+
 `
