@@ -1,0 +1,8 @@
+
+
+j'avais cette erreur en faisant "npm run scss" : 
+sh: node-sass: command not found
+
+Ce qui m'a aidé en global -g : 
+
+- sudo npm install --unsafe-perm -g node-sass
