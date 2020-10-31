@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/codesandboxes",
+      "handler": "codesandboxes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/codesandboxes/count",
+      "handler": "codesandboxes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/codesandboxes/:id",
+      "handler": "codesandboxes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/codesandboxes",
+      "handler": "codesandboxes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/codesandboxes/:id",
+      "handler": "codesandboxes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/codesandboxes/:id",
+      "handler": "codesandboxes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
